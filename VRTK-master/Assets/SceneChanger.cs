@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour
 {
+    public GameObject LoadingScreen, LoadingBarFill;
     static GameMode gameMode;
     static bool isInterviewOnly;
     enum GameMode
@@ -36,8 +38,9 @@ public class SceneChanger : MonoBehaviour
 
     public void GoToMainMenu()
     {
+        Debug.Log("Going back to main menu...");
         resetMenuOptions();
-        SceneManager.LoadScene("Menu");
+        LoadScene("Menu");
     }
 
     public void SetLukasGameMode()
@@ -94,7 +97,7 @@ public class SceneChanger : MonoBehaviour
 
     public void GoToMusicRoom()
     {
-        SceneManager.LoadScene("AudioRoom");
+        LoadScene("AudioRoom");
     }
 
     public void GoToPuzzleRoom()
@@ -106,5 +109,25 @@ public class SceneChanger : MonoBehaviour
     {
         isInterviewOnly = false;
         gameMode = GameMode.None;
+    }
+
+    IEnumerator LoadSceneAsync(string name)
+    {
+        AsyncOperation operation = SceneManager.LoadSceneAsync(name);
+
+        LoadingScreen.SetActive(true);
+
+        while(!operation.isDone)
+        {
+            //float progressValue = Mathf.Clamp01(operation.progress / 0.9f);
+            LoadingBarFill.transform.localScale += new Vector3(0.1f, 0, 0);
+            LoadingBarFill.transform.position += new Vector3(5,0,0);
+            yield return null;
+        }
+    }
+
+    void LoadScene(string name)
+    {
+        StartCoroutine(LoadSceneAsync(name));
     }
 }
