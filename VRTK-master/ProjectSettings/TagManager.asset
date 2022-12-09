@@ -19,7 +19,6 @@ TagManager:
   - ScarecrowHead
   - FireableArrow
   - Basketball
-  - Headset
   layers:
   - Default
   - TransparentFX
