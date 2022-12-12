@@ -22,6 +22,8 @@ TagManager:
   - CorrectBlock
   - Target
   - Headset
+  - DrumStick
+  - Hand
   layers:
   - Default
   - TransparentFX
