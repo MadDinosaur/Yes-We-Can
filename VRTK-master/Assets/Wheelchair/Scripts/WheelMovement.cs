@@ -30,7 +30,8 @@ public class WheelMovement : MonoBehaviour
         //Playarea
         transform.parent.parent.SetPositionAndRotation(new Vector3(transform.position.x, transform.parent.parent.position.y,transform.position.z),transform.rotation);
         //Ghost
-        transform.SetPositionAndRotation(transform.parent.position, transform.parent.rotation);
+        transform.localPosition = new Vector3(0, 0, 0);
+        transform.localRotation = Quaternion.Euler(0, 0, 0);
     }
 
     /* Right Wheel */
@@ -39,7 +40,7 @@ public class WheelMovement : MonoBehaviour
         Debug.Log("Right wheel activated.");
         rightWheelActive = true;
         //--Activate X rotation on wheel--//
-        rightWheel.GetComponent<Rigidbody>().constraints &= ~RigidbodyConstraints.FreezeRotationX;
+        rightWheel.GetComponent<Rigidbody>().constraints &= ~RigidbodyConstraints.FreezeRotationY;
     }
 
     public void DeactivateWheelRight()
@@ -48,7 +49,7 @@ public class WheelMovement : MonoBehaviour
         rightWheelActive = false;
         
         //--Deactivate X rotation on wheel--//
-        rightWheel.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, 0);
+        rightWheel.GetComponent<Transform>().localRotation = Quaternion.Euler(0, 0, 90);
 
         Teleport();
         
@@ -74,16 +75,18 @@ public class WheelMovement : MonoBehaviour
         Debug.Log("Left wheel activated.");
         leftWheelActive = true;
         //--Activate X rotation on wheel--//
-        leftWheel.GetComponent<Rigidbody>().constraints &= ~RigidbodyConstraints.FreezeRotationX;
+        leftWheel.GetComponent<Rigidbody>().constraints &= ~RigidbodyConstraints.FreezeRotationY;
     }
 
     public void DeactivateWheelLeft()
     {
         Debug.Log("Left wheel deactivated.");
         leftWheelActive = false;
-        Teleport();
+        
         //--Deactivate X rotation on wheel--//
-        leftWheel.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, 0);
+        leftWheel.GetComponent<Transform>().localRotation = Quaternion.Euler(0, 0, 90);
+
+        Teleport();
 
         leftWheel.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
     }
@@ -110,11 +113,11 @@ public class WheelMovement : MonoBehaviour
         float z;
         if (controllerInput < maxRotation)
         {
-            z = (float)Math.Sqrt(Math.Pow(turnRadius, 2) - Math.Pow((-x - turnRadius), 2)); //formula of a semicircle
+            z = (float)Math.Sqrt(Math.Pow(turnRadius, 2) - Math.Pow((-x - turnRadius), 2)) + transform.parent.position.z; //formula of a semicircle
         } else
         {
             x = (controllerInput - 360) / multiplicationFactor;
-            z = -(float)Math.Sqrt(Math.Pow(turnRadius, 2) - Math.Pow((-x - turnRadius), 2)); //formula of a semicircle
+            z = -((float)Math.Sqrt(Math.Pow(turnRadius, 2) - Math.Pow((-x - turnRadius), 2)) + transform.parent.position.z); //formula of a semicircle
         }
         //Moving the virtual position
         Vector3 prevPosition = transform.position;
@@ -140,17 +143,16 @@ public class WheelMovement : MonoBehaviour
         float z;
         if (controllerInput < maxRotation)
         {
-            z = (float)Math.Sqrt(Math.Pow(turnRadius, 2) - Math.Pow((x - turnRadius), 2)); //formula of a semicircle
+            z = (float)Math.Sqrt(Math.Pow(turnRadius, 2) - Math.Pow((x - turnRadius), 2)) + transform.parent.position.z; //formula of a semicircle
         } else
         {
             x = -(controllerInput - 360) / multiplicationFactor;
-            z = -(float)Math.Sqrt(Math.Pow(turnRadius, 2) - Math.Pow((x - turnRadius), 2)); //formula of a semicircle
+            z = -((float)Math.Sqrt(Math.Pow(turnRadius, 2) - Math.Pow((x - turnRadius), 2)) + transform.parent.position.z); //formula of a semicircle
         }
         //Moving the virtual position
         Vector3 prevPosition = transform.position;
         transform.position = new Vector3(x, y, z);
         Vector3 currPosition = transform.position;
-        Debug.Log("Ghost current position: " + transform.position);
         //Rotating virtual position
         Vector3 movementDirection = currPosition - prevPosition;
         Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
