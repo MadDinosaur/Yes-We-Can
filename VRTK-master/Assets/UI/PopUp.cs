@@ -13,20 +13,25 @@ public class PopUp : MonoBehaviour
         uiObject.SetActive(false);
     }
 
-    // Update is called once per frame
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Headset")
         {
+            //Activate UI overlay
             uiObject.SetActive(true);
-            StartCoroutine("WaitForSec");
+            //Determine duration of voice line and play
+            AudioSource voiceLine = GetComponent<AudioSource>();
+            float duration = voiceLine.clip.length;
+            voiceLine.Play();
+            //Keep UI active until voice line is done
+            StartCoroutine(WaitForSec(duration));
         }
     }
-    IEnumerator WaitForSec()
+    IEnumerator WaitForSec(float seconds)
     {
-        yield return new WaitForSecondsRealtime(5);
-        Destroy(uiObject);
-        Destroy(gameObject);
+        yield return new WaitForSecondsRealtime(seconds);
+
+        uiObject.SetActive(false);
     }
 
 }
