@@ -15,7 +15,7 @@ public class WheelMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Debug();
+        //DebugWheelRight();
     }
 
     // Update is called once per frame
@@ -176,7 +176,7 @@ public class WheelMovement : MonoBehaviour
         transform.position = new Vector3(x, y, z);
     }
 
-    void Debug()
+    void DebugWheelRight()
     {
         ActivateWheelRight();
         StartCoroutine(DebugTeleport());

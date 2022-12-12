@@ -21,9 +21,8 @@ public class DrumSound : MonoBehaviour
         Debug.Log(other.gameObject.name);
         if (other.gameObject.tag.Equals("DrumStick"))
         {
-            AudioSource note = GetComponentInParent<AudioSource>();
+            AudioSource note = GetComponent<AudioSource>();
             note.Play();
-            GetComponentInChildren<ParticleSystem>().Play();
         }
     }
 }
