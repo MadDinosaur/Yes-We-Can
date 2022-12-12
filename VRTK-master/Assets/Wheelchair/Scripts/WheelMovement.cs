@@ -7,22 +7,22 @@ using Tilia.Interactions.Controllables.AngularDriver;
 
 public class WheelMovement : MonoBehaviour
 {
-    public float turnRadius, drag, rotationSpeed;
-    public GameObject rightWheelJoint, rightWheelJointContainer, leftWheelJoint, leftWheelJointContainer;
+    public float turnRadius = 5, maxRotation = 90, rotationSpeed = 1;
+    public GameObject leftWheel, rightWheel;
     float leftCurrSpeed = 0, rightCurrSpeed = 0;
     bool leftWheelActive, rightWheelActive;
 
     // Start is called before the first frame update
     void Start()
     {
-       
+        //Debug();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        
-
+        if (leftWheelActive) GetVelocityLeft();
+        if (rightWheelActive) GetVelocityRight();
     }
 
     void Teleport()
@@ -36,28 +36,28 @@ public class WheelMovement : MonoBehaviour
     /* Right Wheel */
     public void ActivateWheelRight()
     {
+        Debug.Log("Right wheel activated.");
         rightWheelActive = true;
         //--Activate X rotation on wheel--//
-        rightWheelJoint.GetComponent<Rigidbody>().constraints &= ~RigidbodyConstraints.FreezeRotationX;
-        rightWheelJointContainer.GetComponent<Rigidbody>().constraints &= ~RigidbodyConstraints.FreezeRotationX;
+        rightWheel.GetComponent<Rigidbody>().constraints &= ~RigidbodyConstraints.FreezeRotationX;
     }
 
     public void DeactivateWheelRight()
     {
+        Debug.Log("Right wheel deactivated.");
         rightWheelActive = false;
         
         //--Deactivate X rotation on wheel--//
-        rightWheelJoint.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, 0);
-        rightWheelJointContainer.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, 0);
+        rightWheel.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, 0);
 
         Teleport();
         
-        rightWheelJoint.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-        rightWheelJointContainer.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+        rightWheel.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
     }
 
-    public void GetVelocityRight(float controllerInput)
+    public void GetVelocityRight()
     {
+        float controllerInput = rightWheel.transform.rotation.eulerAngles.x;
         //No movement detected
         if (controllerInput == 0)
             return;
@@ -71,27 +71,26 @@ public class WheelMovement : MonoBehaviour
     /* Left Wheel */
     public void ActivateWheelLeft()
     {
+        Debug.Log("Left wheel activated.");
         leftWheelActive = true;
         //--Activate X rotation on wheel--//
-        leftWheelJoint.GetComponent<Rigidbody>().constraints &= ~RigidbodyConstraints.FreezeRotationX;
-        leftWheelJointContainer.GetComponent<Rigidbody>().constraints &= ~RigidbodyConstraints.FreezeRotationX;
+        leftWheel.GetComponent<Rigidbody>().constraints &= ~RigidbodyConstraints.FreezeRotationX;
     }
 
     public void DeactivateWheelLeft()
     {
+        Debug.Log("Left wheel deactivated.");
         leftWheelActive = false;
         Teleport();
         //--Deactivate X rotation on wheel--//
-        rightWheelJoint.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, 0);
-        rightWheelJointContainer.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, 0);
+        leftWheel.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, 0);
 
-        rightWheelJoint.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-        rightWheelJointContainer.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+        leftWheel.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
     }
 
-    public void GetVelocityLeft(float controllerInput)
+    public void GetVelocityLeft()
     {
-
+        float controllerInput = leftWheel.transform.rotation.eulerAngles.x;
         //No movement detected
         if (controllerInput == 0)
             return;
@@ -102,13 +101,22 @@ public class WheelMovement : MonoBehaviour
 
     void MoveVirtualPositionRight(float controllerInput)
     {
-        //Calculate speed by subtracting wheel position on previous frame to current frame
-        float speed = (controllerInput - rightCurrSpeed)/drag;
-        Debug.Log("Input: " + controllerInput + "; Right wheel speed: " + speed + "; Current coordinate: " + transform.position.x + "; Next coordinate: " + (transform.position.x - speed));
-        //Moving the virtual position
-        float x = controllerInput;
+        //Multiplication factor standardizes the input to a value accepted by the semicircle equation
+        float multiplicationFactor = maxRotation / (turnRadius * 2);
+        float x = -controllerInput / multiplicationFactor;
+        Debug.Log("Input : " + controllerInput + "; X : " + x);
         float y = transform.position.y + 0;
-        float z = (float) Math.Sqrt(Math.Pow(turnRadius, 2) - Math.Pow((-x - turnRadius), 2)); //formula of a semicircle
+        //Apply a semicircle equation, one for forward motion other for backward motion
+        float z;
+        if (controllerInput < maxRotation)
+        {
+            z = (float)Math.Sqrt(Math.Pow(turnRadius, 2) - Math.Pow((-x - turnRadius), 2)); //formula of a semicircle
+        } else
+        {
+            x = (controllerInput - 360) / multiplicationFactor;
+            z = -(float)Math.Sqrt(Math.Pow(turnRadius, 2) - Math.Pow((-x - turnRadius), 2)); //formula of a semicircle
+        }
+        //Moving the virtual position
         Vector3 prevPosition = transform.position;
         transform.position = new Vector3(x, y, z);
         Vector3 currPosition = transform.position;
@@ -123,13 +131,22 @@ public class WheelMovement : MonoBehaviour
 
     void MoveVirtualPositionLeft(float controllerInput)
     {
-        //Calculate speed by subtracting wheel position on previous frame to current frame
-        float speed = (controllerInput - leftCurrSpeed)/drag;
-        Debug.Log("Left wheel speed: " + speed + "; Current coordinate: " + transform.position.x + "; Next coordinate: " + (transform.position.x + speed));
-        //Moving the virtual position
-        float x = transform.position.x + speed;
+        //Multiplication factor standardizes the input to a value accepted by the semicircle equation
+        float multiplicationFactor = maxRotation / (turnRadius * 2);
+        float x = controllerInput / multiplicationFactor;
+        Debug.Log("Input : " + controllerInput + "; X : " + x);
         float y = transform.position.y + 0;
-        float z = (float) Math.Sqrt(Math.Pow(turnRadius, 2) - Math.Pow((x - turnRadius), 2)); //formula of a semicircle
+        //Apply a semicircle equation, one for forward motion other for backward motion
+        float z;
+        if (controllerInput < maxRotation)
+        {
+            z = (float)Math.Sqrt(Math.Pow(turnRadius, 2) - Math.Pow((x - turnRadius), 2)); //formula of a semicircle
+        } else
+        {
+            x = -(controllerInput - 360) / multiplicationFactor;
+            z = -(float)Math.Sqrt(Math.Pow(turnRadius, 2) - Math.Pow((x - turnRadius), 2)); //formula of a semicircle
+        }
+        //Moving the virtual position
         Vector3 prevPosition = transform.position;
         transform.position = new Vector3(x, y, z);
         Vector3 currPosition = transform.position;
@@ -146,15 +163,29 @@ public class WheelMovement : MonoBehaviour
     void MoveVirtualPositionForward(float controllerInput)
     {
         ///Calculate speed by subtracting wheel position on previous frame to current frame
-        float speed = (controllerInput - rightCurrSpeed)/drag;
-        //Updating previous frame information
-        rightCurrSpeed = controllerInput;
+        float multiplicationFactor = maxRotation / (turnRadius * 2);
+        float x = transform.position.x + 0;
+        float y = transform.position.y + 0;
+        float z;
+        if (controllerInput < maxRotation)
+        z = controllerInput / multiplicationFactor; 
+        else
+        z = (controllerInput-360) / multiplicationFactor;
+        Debug.Log("Input : " + controllerInput + "; Z : " + z);
         //Moving the virtual position
-        transform.position += Vector3.forward * speed;
+        transform.position = new Vector3(x, y, z);
     }
 
-    void OnTargetValueReached()
+    void Debug()
     {
-        Debug.Log("Wheel stopped");
+        ActivateWheelRight();
+        StartCoroutine(DebugTeleport());
+    }
+
+    IEnumerator DebugTeleport()
+    {
+        yield return new WaitForSecondsRealtime(10);
+
+        DeactivateWheelRight();
     }
 }
