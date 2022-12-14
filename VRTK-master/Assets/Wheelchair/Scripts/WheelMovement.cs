@@ -15,7 +15,8 @@ public class WheelMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //DebugWheelRight();
+        rightWheel.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+        leftWheel.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
     }
 
     // Update is called once per frame
@@ -40,7 +41,7 @@ public class WheelMovement : MonoBehaviour
         Debug.Log("Right wheel activated.");
         rightWheelActive = true;
         //--Activate X rotation on wheel--//
-        rightWheel.GetComponent<Rigidbody>().constraints &= ~RigidbodyConstraints.FreezeRotationY;
+        rightWheel.GetComponent<Rigidbody>().constraints &= ~RigidbodyConstraints.FreezeRotationX;
     }
 
     public void DeactivateWheelRight()
@@ -113,15 +114,15 @@ public class WheelMovement : MonoBehaviour
         float z;
         if (controllerInput < maxRotation)
         {
-            z = (float)Math.Sqrt(Math.Pow(turnRadius, 2) - Math.Pow((-x - turnRadius), 2)) + transform.parent.position.z; //formula of a semicircle
+            z = (float)Math.Sqrt(Math.Pow(turnRadius, 2) - Math.Pow((-x + transform.parent.position.x - turnRadius), 2)) + transform.parent.position.z; //formula of a semicircle
         } else
         {
             x = (controllerInput - 360) / multiplicationFactor;
-            z = -((float)Math.Sqrt(Math.Pow(turnRadius, 2) - Math.Pow((-x - turnRadius), 2)) + transform.parent.position.z); //formula of a semicircle
+            z = -((float)Math.Sqrt(Math.Pow(turnRadius, 2) - Math.Pow((-x + transform.parent.position.x - turnRadius), 2)) + transform.parent.position.z); //formula of a semicircle
         }
         //Moving the virtual position
         Vector3 prevPosition = transform.position;
-        transform.position = new Vector3(x, y, z);
+        transform.localPosition = new Vector3(x, y, z-transform.parent.position.z);
         Vector3 currPosition = transform.position;
         //Rotating virtual position
         Vector3 movementDirection = currPosition - prevPosition;

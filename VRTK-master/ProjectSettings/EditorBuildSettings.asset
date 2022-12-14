@@ -6,23 +6,26 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Menu/Menu.unity
-    guid: d729bf972d9e63e44acad5ccfe4039c1
-  - enabled: 0
     path: Assets/Interview Room/MovieTheatre.unity
     guid: 5096b9e84c80ce045bbe0513b548ad7a
-  - enabled: 1
+  - enabled: 0
     path: Assets/FH Ent/FHEntr.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 0
+  - enabled: 1
     path: Assets/Basketball Court/BasketballCourt.unity
     guid: 5ce856173715a394aa3547309bb36416
+  - enabled: 1
+    path: Assets/Menu/Menu.unity
+    guid: d729bf972d9e63e44acad5ccfe4039c1
   - enabled: 0
     path: Assets/MusicRoom/AudioRoom.unity
     guid: ffb986f07d2db5d47bae48189b449b0f
   - enabled: 0
     path: Assets/Classroom/Classroom.unity
     guid: e9cf481bef08d064c974fd1c3829b9b5
+  - enabled: 0
+    path: Assets/FH Ent/TeleportTest/TeleportTest.unity
+    guid: f37e9b8efa5d2084ead2cc367c549cce
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 66a24e0c33d74e64eb58834fc0c0f8b0,
       type: 2}
