@@ -29,6 +29,3 @@ ExportedObj/
 # Builds
 *.apk
 *.unitypackage
-
-# Generated
-*.meta
