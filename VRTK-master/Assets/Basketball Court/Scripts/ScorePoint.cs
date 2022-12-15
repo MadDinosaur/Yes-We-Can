@@ -11,7 +11,8 @@ public class ScorePoint : MonoBehaviour
     public ParticleSystem confetti;
     public TMP_Text textBox;
     public TMP_Text timeBox;
-    public Animator peopleAnimator;
+    public Animator[] peopleAnimators = new Animator[9];
+    public AnimatorControllerParameter animator;
     System.Random rnd = new System.Random();
     
     // Start is called before the first frame update
@@ -38,8 +39,11 @@ public class ScorePoint : MonoBehaviour
             points += 1;
             confetti.Play();
             textBox.SetText(points.ToString());
-            peopleAnimator.SetInteger("AnimationNum", rnd.Next(1, 4));
-            peopleAnimator.SetInteger("AnimationNum", 0);
+            foreach(Animator peopleAnimator in peopleAnimators) {
+                peopleAnimator.SetBool("Cheer", true);
+                peopleAnimator.SetInteger("AnimationNum", rnd.Next(1, 4));
+                peopleAnimator.SetBool("Cheer", false);
+            }
         }
     }
 }
