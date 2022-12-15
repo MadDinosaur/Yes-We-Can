@@ -170,7 +170,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: basket.fhstp.bob.game
+    Android: fhstp.bob.game
     Standalone: io.extendreality.vrtk
   buildNumber: {}
   AndroidBundleVersionCode: 1
