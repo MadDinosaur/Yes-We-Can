@@ -41,7 +41,7 @@ public class WheelMovement : MonoBehaviour
         Debug.Log("Right wheel activated.");
         rightWheelActive = true;
         //--Activate X rotation on wheel--//
-        rightWheel.GetComponent<Rigidbody>().constraints &= ~RigidbodyConstraints.FreezeRotationX;
+        rightWheel.GetComponent<Rigidbody>().constraints &= ~RigidbodyConstraints.FreezeRotationY;
     }
 
     public void DeactivateWheelRight()
