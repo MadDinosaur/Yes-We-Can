@@ -24,6 +24,22 @@ TagManager:
   - Headset
   - DrumStick
   - Hand
+  - PuzzlePiece001
+  - PuzzlePiece002
+  - PuzzlePiece003
+  - PuzzlePiece004
+  - PuzzlePiece005
+  - PuzzlePiece006
+  - PuzzlePiece007
+  - PuzzlePiece008
+  - PuzzlePiece009
+  - PuzzlePiece010
+  - PuzzlePiece011
+  - PuzzlePiece012
+  - PuzzlePiece013
+  - PuzzlePiece014
+  - PuzzlePiece015
+  - PuzzlePiece016
   layers:
   - Default
   - TransparentFX
