@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour
 {
+    public FadeScreen fadeScreen;
     public GameObject LoadingScreen, LoadingBarFill;
     static GameMode gameMode;
     static bool isInterviewOnly;
@@ -40,7 +41,7 @@ public class SceneChanger : MonoBehaviour
     {
         Debug.Log("Going back to main menu...");
         resetMenuOptions();
-        LoadScene("Menu");
+        SceneManager.LoadScene("Menu");
     }
 
     public void SetLukasGameMode()
@@ -97,7 +98,7 @@ public class SceneChanger : MonoBehaviour
 
     public void GoToMusicRoom()
     {
-        LoadScene("AudioRoom");
+        SceneManager.LoadScene("AudioRoom");
     }
 
     public void GoToPuzzleRoom()
@@ -113,21 +114,28 @@ public class SceneChanger : MonoBehaviour
 
     IEnumerator LoadSceneAsync(string name)
     {
+        fadeScreen.FadeOut();
         AsyncOperation operation = SceneManager.LoadSceneAsync(name);
+        operation.allowSceneActivation = false;
 
-        LoadingScreen.SetActive(true);
-
-        while(!operation.isDone)
+        float timer = 0;
+        while (timer <= fadeScreen.fadeDuration && !operation.isDone)
         {
-            //float progressValue = Mathf.Clamp01(operation.progress / 0.9f);
-            LoadingBarFill.transform.localScale += new Vector3(0.1f, 0, 0);
-            LoadingBarFill.transform.position += new Vector3(5,0,0);
+            timer += Time.deltaTime;
             yield return null;
-        }
-    }
 
-    void LoadScene(string name)
-    {
-        StartCoroutine(LoadSceneAsync(name));
+        }
+
+        operation.allowSceneActivation = true;
     }
+       // LoadingScreen.SetActive(true);
+
+      //  while(!operation.isDone)
+       // {
+            //float progressValue = Mathf.Clamp01(operation.progress / 0.9f);
+         //   LoadingBarFill.transform.localScale += new Vector3(0.1f, 0, 0);
+            //LoadingBarFill.transform.position += new Vector3(5,0,0);
+           // yield return null;
+       // }
+
 }
