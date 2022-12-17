@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -9,25 +8,27 @@ public class DyslexiaText : MonoBehaviour
     TMP_Text boardText;
     
     string[] words;
-    System.Random rnd = new System.Random();
+
+    public int velocity = 30;
+    int velocityTracker;
 
     // Start is called before the first frame update
     void Start()
     {
         boardText = GetComponent<TMP_Text>();
-        words = getWords();
-
-        InvokeRepeating("ChangeText", 0.0f, 5.0f);
+        velocityTracker = velocity;
     }
 
     // Update is called once per frame
     void Update()
     {
-       
+        if (velocityTracker == 0) { ChangeText(); velocityTracker = velocity; }
+        else velocityTracker--;
     }
 
     void ChangeText()
     {
+        Debug.Log("executing");
         boardText.SetText(messUpText());
     }
 
@@ -40,17 +41,22 @@ public class DyslexiaText : MonoBehaviour
     {
         for (int i = 0; i < words.Length; i++)
         {
-            if (rnd.Next(1, 10) > 1) continue;
+            if (Random.Range(1, 6) > 1) continue;
             words[i] = messUpWord(words[i]);
         }
     }
 
     string messUpWord(string word)
     {
+        Debug.Log("Messing up word: " + word);
         if (word.Length < 3)
         {
-
+            
             return word;
+        }
+        if (word.Length < 4)
+        {
+            return messUpMessyPart(word);
         }
 
         return word[0] + messUpMessyPart(word.Substring(1, word.Length - 2)) + word[word.Length - 1];
@@ -58,6 +64,7 @@ public class DyslexiaText : MonoBehaviour
 
     string messUpMessyPart(string word)
     {
+        Debug.Log("Messing up section: " + word);
         if (word.Length < 2)
         {
 
@@ -68,15 +75,17 @@ public class DyslexiaText : MonoBehaviour
         do
         {
 
-            a = rnd.Next(0, word.Length - 1);
-            b = rnd.Next(0, word.Length - 1);
+            a = Random.Range(0, word.Length);
+            b = Random.Range(0, word.Length);
         } while (!(a < b));
 
+        if (b == word.Length - 1) return word.Substring(0, a) + word[b] + word.Substring(a + 1, b - (a + 1)) + word[a];
         return word.Substring(0, a) + word[b] + word.Substring(a + 1, b - (a+1)) + word[a] + word.Substring(b + 1);
     }
 
     string messUpText()
     {
+        words = getWords();
         messUpWords();
         return string.Join(" ", words);
     }
