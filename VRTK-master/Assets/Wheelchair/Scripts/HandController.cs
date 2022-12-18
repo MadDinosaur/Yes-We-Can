@@ -28,4 +28,14 @@ public class HandController : MonoBehaviour
     {
         animator.SetBool("isGripping", false);
     }
+
+    public void ActivatePoint()
+    {
+        animator.SetBool("isPointing", true);
+    }
+
+    public void DeactivatePoint()
+    {
+        animator.SetBool("isPointing", false);
+    }
 }

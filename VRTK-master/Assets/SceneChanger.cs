@@ -6,8 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour
 {
-    public FadeScreen fadeScreen;
-    public GameObject LoadingScreen, LoadingBarFill;
+    public bool fadeOnStart = true;
+    public float transitionDuration = 2;
+    public Color transitionColor;
+    public GameObject screenFader;
+    private Renderer rend;
+    //public GameObject LoadingScreen, LoadingBarFill;
+    
     static GameMode gameMode;
     static bool isInterviewOnly;
     enum GameMode
@@ -20,18 +25,19 @@ public class SceneChanger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        rend = screenFader.GetComponent<Renderer>();
+        if (fadeOnStart) FadeIn();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void OnCollisionEnter(Collision other)
     {
-        if(other.gameObject.tag.Equals("Headset"))
+        if (other.gameObject.tag.Equals("Headset"))
         {
             LeaveMovieTheater();
         }
@@ -41,7 +47,7 @@ public class SceneChanger : MonoBehaviour
     {
         Debug.Log("Going back to main menu...");
         resetMenuOptions();
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("MenuClass");
     }
 
     public void SetLukasGameMode()
@@ -77,7 +83,7 @@ public class SceneChanger : MonoBehaviour
 
     public void LeaveFHEntrance()
     {
-        switch(gameMode)
+        switch (gameMode)
         {
             case (GameMode.Wheelchair):
                 GoToBasketballCourt();
@@ -90,7 +96,7 @@ public class SceneChanger : MonoBehaviour
                 break;
         }
     }
-    
+
     public void GoToBasketballCourt()
     {
         SceneManager.LoadScene("BasketballCourt");
@@ -114,28 +120,56 @@ public class SceneChanger : MonoBehaviour
 
     IEnumerator LoadSceneAsync(string name)
     {
-        fadeScreen.FadeOut();
+        FadeOut();
+        
+        //Launch new scene
         AsyncOperation operation = SceneManager.LoadSceneAsync(name);
+
+        //Wait for scene load and trasition animation
         operation.allowSceneActivation = false;
 
         float timer = 0;
-        while (timer <= fadeScreen.fadeDuration && !operation.isDone)
+        while (timer <= transitionDuration && !operation.isDone)
         {
             timer += Time.deltaTime;
             yield return null;
-
         }
 
         operation.allowSceneActivation = true;
     }
-       // LoadingScreen.SetActive(true);
 
-      //  while(!operation.isDone)
-       // {
-            //float progressValue = Mathf.Clamp01(operation.progress / 0.9f);
-         //   LoadingBarFill.transform.localScale += new Vector3(0.1f, 0, 0);
-            //LoadingBarFill.transform.position += new Vector3(5,0,0);
-           // yield return null;
-       // }
+    public void FadeIn()
+    {
+        Fade(1, 0);
+    }
 
+    public void FadeOut()
+    {
+        Fade(0, 1);
+    }
+
+    void Fade (float alphaIn, float alphaOut)
+    {
+        StartCoroutine(FadeRoutine(alphaIn, alphaOut));
+    }
+
+    IEnumerator FadeRoutine (float alphaIn, float alphaOut)
+    {
+        float timer = 0;
+        while (timer <= transitionDuration)
+        {
+            Color newColor = transitionColor;
+            newColor.a = Mathf.Lerp(alphaIn, alphaOut, timer / transitionDuration);
+
+            rend.material.SetColor("_BaseColor", newColor);
+
+            timer += Time.deltaTime;
+            yield return null;
+        }
+
+        Color newColorFinal = transitionColor;
+        newColorFinal.a = alphaOut;
+
+        rend.material.SetColor("_Color", newColorFinal);
+    }
 }

@@ -28,7 +28,6 @@ public class DyslexiaText : MonoBehaviour
 
     void ChangeText()
     {
-        Debug.Log("executing");
         boardText.SetText(messUpText());
     }
 
@@ -48,7 +47,6 @@ public class DyslexiaText : MonoBehaviour
 
     string messUpWord(string word)
     {
-        Debug.Log("Messing up word: " + word);
         if (word.Length < 3)
         {
             
@@ -64,7 +62,6 @@ public class DyslexiaText : MonoBehaviour
 
     string messUpMessyPart(string word)
     {
-        Debug.Log("Messing up section: " + word);
         if (word.Length < 2)
         {
 

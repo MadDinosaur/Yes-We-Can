@@ -40,6 +40,8 @@ TagManager:
   - PuzzlePiece014
   - PuzzlePiece015
   - PuzzlePiece016
+  - Whiteboard
+  - Marker
   layers:
   - Default
   - TransparentFX
@@ -50,7 +52,7 @@ TagManager:
   - 
   - 
   - IgnoreTeleportPointer
-  - 
+  - Marker
   - 
   - 
   - 
