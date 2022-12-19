@@ -95,7 +95,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 8400000, guid: 272016c730be2bd44aef25366585450a, type: 2}
+  m_Texture: {fileID: 2800000, guid: 1c9424b20c067ab41afeb01081f51af7, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -168,8 +168,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d2eb9d8bfb89eba4dbfaa3080d47c649, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -245,8 +245,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d2eb9d8bfb89eba4dbfaa3080d47c649, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -276,11 +276,11 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3472178681661505209}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 2c316e2c81e6b164dbda5dee44d9c5bc, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 267a1987c1b130e4caacab688deea8b9, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
-  m_TargetTexture: {fileID: 8400000, guid: 272016c730be2bd44aef25366585450a, type: 2}
+  m_TargetTexture: {fileID: 8400000, guid: a77637254a1ca7d42a0a6942f8d5123d, type: 2}
   m_TimeReference: 0
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: _MainTex
@@ -479,6 +479,6 @@ SpriteRenderer:
   m_Size: {x: 2.47, y: 1.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
