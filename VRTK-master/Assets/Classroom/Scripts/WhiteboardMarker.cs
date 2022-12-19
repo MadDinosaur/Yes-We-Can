@@ -5,30 +5,7 @@ using System.Linq;
 
 public class WhiteboardMarker : MonoBehaviour
 {
-    public Whiteboard whiteboard;
-    private RaycastHit touch;
-
-    private void Start()
-    {
-        whiteboard = GameObject.Find("Whiteboard").GetComponent<Whiteboard>();
-    }
-
-    private void Update()
-    {
-        float tipHeight = transform.Find("Tip").transform.localScale.y;
-        Vector3 tip = transform.Find("Tip").transform.position;
-
-        if (Physics.Raycast(tip, transform.up, out touch, tipHeight))
-        {
-            if (!(touch.collider.tag == "Whiteboard")) return;
-
-            whiteboard = touch.collider.GetComponent<Whiteboard>();
-            Debug.Log("touching");
-        }
-    }
-
-
-    /*[SerializeField] private Transform _tip;
+    [SerializeField] private Transform _tip;
     [SerializeField] private int _penSize = 5;
 
     private Renderer _renderer;
@@ -101,5 +78,5 @@ public class WhiteboardMarker : MonoBehaviour
 
         _whiteboard = null;
         _touchedLastFrame = false;
-    }*/
+    }
 }

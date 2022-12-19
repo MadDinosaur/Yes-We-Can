@@ -13,7 +13,7 @@ public class ScorePoint : MonoBehaviour
     public TMP_Text timeBox;
     public Animator[] peopleAnimators = new Animator[9];
     public AnimatorControllerParameter animator;
-    System.Random rnd = new System.Random();
+    //System.Random rnd = new System.Random();
     
     // Start is called before the first frame update
     void Start()
@@ -40,9 +40,8 @@ public class ScorePoint : MonoBehaviour
             confetti.Play();
             textBox.SetText(points.ToString());
             foreach(Animator peopleAnimator in peopleAnimators) {
-                peopleAnimator.SetBool("Cheer", true);
-                peopleAnimator.SetInteger("AnimationNum", rnd.Next(1, 4));
-                peopleAnimator.SetBool("Cheer", false);
+                peopleAnimator.SetTrigger("Cheer");
+                peopleAnimator.SetInteger("AnimationNum", UnityEngine.Random.Range(1, 4));
             }
         }
     }

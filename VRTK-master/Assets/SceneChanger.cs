@@ -52,6 +52,7 @@ public class SceneChanger : MonoBehaviour
 
     public void SetLukasGameMode()
     {
+        Debug.Log("lukas");
         gameMode = GameMode.Wheelchair;
     }
 
@@ -72,6 +73,7 @@ public class SceneChanger : MonoBehaviour
 
     public void GoToMovieTheater()
     {
+        Debug.Log("movie");
         SceneManager.LoadScene("MovieTheatre");
     }
 

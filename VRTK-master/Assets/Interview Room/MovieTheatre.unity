@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -682,9 +682,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a32647d1757af1468b8407316d78194, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeScreen: {fileID: 0}
-  LoadingScreen: {fileID: 0}
-  LoadingBarFill: {fileID: 0}
+  fadeOnStart: 1
+  transitionDuration: 2
+  transitionColor: {r: 0, g: 0, b: 0, a: 0}
+  screenFader: {fileID: 0}
 --- !u!65 &1192347549
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -943,9 +944,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a32647d1757af1468b8407316d78194, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeScreen: {fileID: 216749921665047859}
-  LoadingScreen: {fileID: 0}
-  LoadingBarFill: {fileID: 0}
+  fadeOnStart: 1
+  transitionDuration: 2
+  transitionColor: {r: 0, g: 0, b: 0, a: 0}
+  screenFader: {fileID: 216749921665047869}
 --- !u!4 &1504489628
 Transform:
   m_ObjectHideFlags: 0
@@ -1648,21 +1650,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &216749921665047859
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 216749921665047869}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: feabb9cb55c788c49b2ff1d6e76aaee5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeOnStart: 1
-  fadeDuration: 2
-  fadeColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &216749921665047868
 Transform:
   m_ObjectHideFlags: 0
@@ -1688,7 +1675,6 @@ GameObject:
   - component: {fileID: 216749921665047868}
   - component: {fileID: 216749921665047857}
   - component: {fileID: 216749921665047858}
-  - component: {fileID: 216749921665047859}
   m_Layer: 0
   m_Name: FaderScreen
   m_TagString: Untagged

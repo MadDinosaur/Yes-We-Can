@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0.73171055, g: 0.76139194, b: 0.8207547, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 0.22
-  m_AmbientMode: 0
+  m_AmbientIntensity: 1.3
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.202
@@ -35,10 +35,10 @@ RenderSettings:
   m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
-  m_ReflectionIntensity: 0
+  m_ReflectionIntensity: 0.453
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 0}
+  m_IndirectSpecularColor: {r: 0.30251878, g: 0.33776814, b: 0.39520362, a: 0.453}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 09d1463b84fbff84f9e48d7ad8d66527,
+  m_LightingDataAsset: {fileID: 112000000, guid: 2fca916ba874c754586d17cb98dd1665,
     type: 2}
   m_UseShadowmask: 0
 --- !u!196 &4
@@ -329,18 +329,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.2450002, y: 0.01, z: 0.17000005}
   m_Center: {x: -0.6099994, y: -0.000000007450581, z: -0.0000038146973}
---- !u!114 &19290952 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8021143757838588516, guid: 4c5ab17cc23539c4b89dab773753dda8,
-    type: 3}
-  m_PrefabInstance: {fileID: 8021143757857079596}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: feabb9cb55c788c49b2ff1d6e76aaee5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &24508979
 GameObject:
   m_ObjectHideFlags: 0
@@ -4525,7 +4513,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.7
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -4570,7 +4558,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: -1, y: 9, z: 10, w: -10}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -4581,13 +4569,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 408211945}
-  m_LocalRotation: {x: -0.48065, y: -0.8393142, z: 0.24247038, w: 0.075732216}
+  m_LocalRotation: {x: -0.48268563, y: -0.8736352, z: -0.0014317975, w: -0.061434574}
   m_LocalPosition: {x: -5.76, y: 12.07, z: -0.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 19.525002, y: -157.531, z: 63.512005}
+  m_LocalEulerAnglesHint: {x: 3.256, y: -186.252, z: 57.664}
 --- !u!1 &416529740
 GameObject:
   m_ObjectHideFlags: 0
@@ -4831,7 +4819,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.7
+  m_Intensity: 1
   m_Range: 200
   m_SpotAngle: 110.04097
   m_InnerSpotAngle: 93.773384
@@ -7129,7 +7117,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.07
+  m_Intensity: 1
   m_Range: 200
   m_SpotAngle: 110.04097
   m_InnerSpotAngle: 93.773384
@@ -10069,7 +10057,7 @@ Transform:
   m_LocalPosition: {x: -2.72, y: -0.357, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 6250577540255854409}
+  - {fileID: 8021143757857079597}
   - {fileID: 527815002}
   m_Father: {fileID: 1848415069}
   m_RootOrder: 0
@@ -13324,9 +13312,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a32647d1757af1468b8407316d78194, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeScreen: {fileID: 19290952}
-  LoadingScreen: {fileID: 0}
-  LoadingBarFill: {fileID: 0}
+  fadeOnStart: 1
+  transitionDuration: 2
+  transitionColor: {r: 0, g: 0, b: 0, a: 0}
+  screenFader: {fileID: 0}
 --- !u!4 &1528559274
 Transform:
   m_ObjectHideFlags: 0
@@ -36206,12 +36195,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!4 &6250577540255854409 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4174362518863867493, guid: 4c5ab17cc23539c4b89dab773753dda8,
-    type: 3}
-  m_PrefabInstance: {fileID: 8021143757857079596}
-  m_PrefabAsset: {fileID: 0}
 --- !u!33 &6253230150727962024
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -41720,6 +41703,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c5ab17cc23539c4b89dab773753dda8, type: 3}
+--- !u!4 &8021143757857079597 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 8021143757857079596}
+  m_PrefabAsset: {fileID: 0}
 --- !u!23 &8022082543086059548
 MeshRenderer:
   m_ObjectHideFlags: 0
