@@ -17,6 +17,8 @@ public class PopUp : MonoBehaviour
     {
         if (other.gameObject.tag == "Headset")
         {
+            //Deactivate collider
+            GetComponent<Collider>().enabled = false;
             //Activate UI overlay
             uiObject.SetActive(true);
             //Determine duration of voice line and play
@@ -31,7 +33,8 @@ public class PopUp : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(seconds);
 
-        uiObject.SetActive(false);
+        Destroy(uiObject);
+        Destroy(this.gameObject);
     }
 
 }
