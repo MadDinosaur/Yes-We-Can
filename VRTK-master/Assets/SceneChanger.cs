@@ -35,8 +35,9 @@ public class SceneChanger : MonoBehaviour
 
     }
 
-    public void OnCollisionEnter(Collision other)
+    public void OnTriggerEnter(Collider other)
     {
+        Debug.Log("triger with " + other.gameObject.name);
         if (other.gameObject.tag.Equals("Headset"))
         {
             LeaveMovieTheater();
