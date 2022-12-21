@@ -48,7 +48,7 @@ public class SceneChanger : MonoBehaviour
     {
         Debug.Log("Going back to main menu...");
         resetMenuOptions();
-        SceneManager.LoadScene("MenuClass");
+        LoadScene("MenuClass");
     }
 
     public void SetLukasGameMode()
@@ -75,13 +75,13 @@ public class SceneChanger : MonoBehaviour
     public void GoToMovieTheater()
     {
         Debug.Log("movie");
-        SceneManager.LoadScene("MovieTheatre");
+        LoadScene("MovieTheatre");
     }
 
     public void LeaveMovieTheater()
     {
         if (isInterviewOnly) GoToMainMenu();
-        else SceneManager.LoadScene("FHEntr");
+        else LoadScene("FHEntr");
     }
 
     public void LeaveFHEntrance()
@@ -102,23 +102,28 @@ public class SceneChanger : MonoBehaviour
 
     public void GoToBasketballCourt()
     {
-        SceneManager.LoadScene("BasketballCourt");
+        LoadScene("BasketballCourt");
     }
 
     public void GoToMusicRoom()
     {
-        SceneManager.LoadScene("AudioRoom");
+        LoadScene("AudioRoom");
     }
 
     public void GoToPuzzleRoom()
     {
-        SceneManager.LoadScene("Classroom");
+        LoadScene("Classroom");
     }
 
     void resetMenuOptions()
     {
         isInterviewOnly = false;
         gameMode = GameMode.None;
+    }
+
+    void LoadScene(string name)
+    {
+        StartCoroutine(LoadSceneAsync(name));
     }
 
     IEnumerator LoadSceneAsync(string name)
