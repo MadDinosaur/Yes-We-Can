@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 
 public class SceneChanger : MonoBehaviour
 {
@@ -11,10 +12,13 @@ public class SceneChanger : MonoBehaviour
     public Color transitionColor;
     public GameObject screenFader;
     private Renderer rend;
-    //public GameObject LoadingScreen, LoadingBarFill;
     
     static GameMode gameMode;
     static bool isInterviewOnly;
+    static bool playVideoOnStart;
+
+    [SerializeField]
+    public VideoClip[] videoClips = new VideoClip[3];
     enum GameMode
     {
         Wheelchair,
@@ -27,6 +31,24 @@ public class SceneChanger : MonoBehaviour
     {
         rend = screenFader.GetComponent<Renderer>();
         if (fadeOnStart) FadeIn();
+
+        if (playVideoOnStart)
+        {
+            //Get video player object and set the correct video for each character
+            VideoPlayer videoPlayer = GameObject.FindGameObjectWithTag("MovieScreen").GetComponent<VideoPlayer>();
+            switch (gameMode)
+            {
+                case (GameMode.Wheelchair):
+                    videoPlayer.clip = videoClips[0];
+                    break;
+                case (GameMode.Blindess):
+                    videoPlayer.clip = videoClips[1];
+                    break;
+                case (GameMode.Dyslexia):
+                    videoPlayer.clip = videoClips[2];
+                    break;
+            }
+        }
     }
 
     // Update is called once per frame
@@ -75,11 +97,13 @@ public class SceneChanger : MonoBehaviour
     public void GoToMovieTheater()
     {
         Debug.Log("movie");
+        playVideoOnStart = true;
         LoadScene("MovieTheatre");
     }
 
     public void LeaveMovieTheater()
     {
+        playVideoOnStart = false;
         if (isInterviewOnly) GoToMainMenu();
         else LoadScene("FHEntr");
     }

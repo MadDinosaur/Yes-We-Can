@@ -42,6 +42,7 @@ TagManager:
   - PuzzlePiece016
   - Whiteboard
   - Marker
+  - MovieScreen
   layers:
   - Default
   - TransparentFX
