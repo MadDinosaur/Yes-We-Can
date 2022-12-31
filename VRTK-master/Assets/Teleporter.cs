@@ -24,7 +24,7 @@ public class Teleporter : MonoBehaviour
     {
         Vector3 targetPosition = new Vector3(targetCoords.transform.position.x, target.transform.position.y, targetCoords.transform.position.z);
         target.transform.position = targetPosition;
-        Quaternion targetRotation = Quaternion.Euler(offset.transform.rotation.x, target.transform.rotation.y, offset.transform.rotation.z);
-        target.transform.rotation = targetRotation;
+        //Quaternion targetRotation = Quaternion.Euler(offset.transform.rotation.x, target.transform.rotation.y, offset.transform.rotation.z);
+        //target.transform.rotation = targetRotation;
     }
 }
