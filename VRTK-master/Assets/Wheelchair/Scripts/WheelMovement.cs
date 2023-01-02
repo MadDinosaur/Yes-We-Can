@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Tilia.Interactions.Controllables.AngularDriver;
+using TMPro;
 
 
 public class WheelMovement : MonoBehaviour
@@ -12,11 +13,17 @@ public class WheelMovement : MonoBehaviour
     float leftCurrSpeed = 0, rightCurrSpeed = 0;
     bool leftWheelActive, rightWheelActive;
 
+    TextMeshPro debug;
+
     // Start is called before the first frame update
     void Start()
     {
         rightWheel.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
         leftWheel.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+
+        debug = GameObject.Find("DebugText").GetComponent<TextMeshPro>();
+
+        DebugWheelRight();
     }
 
     // Update is called once per frame
@@ -60,6 +67,7 @@ public class WheelMovement : MonoBehaviour
     public void GetVelocityRight()
     {
         float controllerInput = rightWheel.transform.rotation.eulerAngles.x;
+        debug.SetText("OuterWheel: \n" + rightWheel.transform.rotation.eulerAngles.x + "\nInnerWheel: \n" + GameObject.Find("RightWheelInner").transform.rotation.eulerAngles.x);
         //No movement detected
         if (controllerInput == 0)
             return;
@@ -109,12 +117,12 @@ public class WheelMovement : MonoBehaviour
         float multiplicationFactor = maxRotation / (turnRadius * 2);
         float x = -controllerInput / multiplicationFactor;
         Debug.Log("Input : " + controllerInput + "; X : " + x);
-        float y = transform.position.y + 0;
+        float y = transform.localPosition.y + 0;
         //Apply a semicircle equation, one for forward motion other for backward motion
         float z;
         if (controllerInput < maxRotation)
         {
-            z = (float)Math.Sqrt(Math.Pow(turnRadius, 2) - Math.Pow((-x + transform.parent.position.x - turnRadius), 2)) + transform.parent.position.z; //formula of a semicircle
+            z = (float)Math.Sqrt(Math.Pow(turnRadius, 2) - Math.Pow((-x - turnRadius), 2)); //formula of a semicircle
         } else
         {
             x = (controllerInput - 360) / multiplicationFactor;
@@ -122,7 +130,7 @@ public class WheelMovement : MonoBehaviour
         }
         //Moving the virtual position
         Vector3 prevPosition = transform.position;
-        transform.localPosition = new Vector3(x, y, z-transform.parent.position.z);
+        transform.localPosition = new Vector3(x, y, z);
         Vector3 currPosition = transform.position;
         //Rotating virtual position
         Vector3 movementDirection = currPosition - prevPosition;
@@ -139,7 +147,7 @@ public class WheelMovement : MonoBehaviour
         float multiplicationFactor = maxRotation / (turnRadius * 2);
         float x = controllerInput / multiplicationFactor;
         Debug.Log("Input : " + controllerInput + "; X : " + x);
-        float y = transform.position.y + 0;
+        float y = transform.localPosition.y + 0;
         //Apply a semicircle equation, one for forward motion other for backward motion
         float z;
         if (controllerInput < maxRotation)
@@ -187,7 +195,7 @@ public class WheelMovement : MonoBehaviour
 
     IEnumerator DebugTeleport()
     {
-        yield return new WaitForSecondsRealtime(10);
+        yield return new WaitForSecondsRealtime(30);
 
         DeactivateWheelRight();
     }
