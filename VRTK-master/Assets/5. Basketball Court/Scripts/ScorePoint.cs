@@ -38,6 +38,7 @@ public class ScorePoint : MonoBehaviour
         {
             points += 1;
             confetti.Play();
+            GetComponent<AudioSource>().Play();
             textBox.SetText(points.ToString());
             foreach(Animator peopleAnimator in peopleAnimators) {
                 peopleAnimator.SetTrigger("Cheer");
