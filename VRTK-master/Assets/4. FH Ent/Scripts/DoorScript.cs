@@ -53,7 +53,7 @@ public class DoorScript : MonoBehaviour
     void openDoorRight() {
         Vector3 newRotation = doorRight.transform.eulerAngles;
         if (newRotation.y < openDoorRightPosition) {
-            newRotation.y += 0.1f;
+            newRotation.y += 0.5f;
             doorRight.transform.eulerAngles = newRotation;
 
             newRotation.y = -newRotation.y;
