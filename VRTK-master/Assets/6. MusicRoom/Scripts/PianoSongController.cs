@@ -41,7 +41,10 @@ public class PianoSongController : MonoBehaviour
             } else if (currentsequence.Count == notesequence.Count)
             {
                 //Play correct sound
+                GetComponent<AudioSource>().Play();
 
+                //Reset sequence
+                currentsequence = new List<string>();
             }
         }
     }
