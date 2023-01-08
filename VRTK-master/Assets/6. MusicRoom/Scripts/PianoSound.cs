@@ -18,11 +18,12 @@ public class PianoSound : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        //if (other.gameObject.tag.Equals("Hand"))
-        //{
+        Debug.Log(other.gameObject.name);
+        if (other.gameObject.tag.Equals("Hand"))
+        {
             Debug.Log("Collision detected");
             AudioSource note = GetComponentInParent<AudioSource>();
-            note.Play();
-        //}
+            if (!note.isPlaying) note.Play();
+        }
     }
 }
