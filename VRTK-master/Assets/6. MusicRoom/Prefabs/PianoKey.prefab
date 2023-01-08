@@ -282,7 +282,7 @@ Transform:
   m_GameObject: {fileID: 5072794341479424061}
   m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
   m_LocalPosition: {x: -5.2249537, y: -1.8990829, z: 6.1549845}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.95, y: 1, z: 1}
   m_Children:
   - {fileID: 5072794342857096814}
   - {fileID: 3254874837167522669}
@@ -485,6 +485,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5072794341479424062}
     m_Modifications:
+    - target: {fileID: 1471341665110845562, guid: 345900e9a5776bb49a23e6dda2bc42e6,
+        type: 3}
+      propertyPath: m_UseMotor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1471341665110845562, guid: 345900e9a5776bb49a23e6dda2bc42e6,
+        type: 3}
+      propertyPath: m_UseLimits
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2964634821949453181, guid: 345900e9a5776bb49a23e6dda2bc42e6,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -600,20 +610,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7731991134684492240, guid: 345900e9a5776bb49a23e6dda2bc42e6,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5905
+      objectReference: {fileID: 0}
     - target: {fileID: 7881770749639878687, guid: 345900e9a5776bb49a23e6dda2bc42e6,
         type: 3}
       propertyPath: m_Constraints
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7881770749639878687, guid: 345900e9a5776bb49a23e6dda2bc42e6,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8492537125314025357, guid: 345900e9a5776bb49a23e6dda2bc42e6,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.24321556
+      value: 0.29986328
       objectReference: {fileID: 0}
     - target: {fileID: 8492537125314025357, guid: 345900e9a5776bb49a23e6dda2bc42e6,
         type: 3}
       propertyPath: m_Center.x
-      value: -0.10848522
+      value: -0.037685264
       objectReference: {fileID: 0}
     - target: {fileID: 8492537125314025357, guid: 345900e9a5776bb49a23e6dda2bc42e6,
         type: 3}
