@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DrumSound : MonoBehaviour
 {
+    public Highlighter highlighter;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +35,10 @@ public class DrumSound : MonoBehaviour
         AudioSource note = GetComponent<AudioSource>();
         if (note.isPlaying) { note.Stop(); note.Play(); }
         else note.Play();
+    }
 
+    private void OnTriggerExit(Collider other)
+    {
+        highlighter.Unhighlight();
     }
 }
