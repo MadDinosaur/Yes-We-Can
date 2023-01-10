@@ -11559,6 +11559,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6003838399826798429, guid: fcc50a6038acca74cb5622fb36d1e9dd,
+        type: 3}
+      propertyPath: build
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6003838399826798429, guid: fcc50a6038acca74cb5622fb36d1e9dd,
+        type: 3}
+      propertyPath: buildHeight
+      value: 1.593
+      objectReference: {fileID: 0}
+    - target: {fileID: 6003838399826798429, guid: fcc50a6038acca74cb5622fb36d1e9dd,
+        type: 3}
+      propertyPath: editorHeight
+      value: 0.152
+      objectReference: {fileID: 0}
     - target: {fileID: 8958071808393808468, guid: fcc50a6038acca74cb5622fb36d1e9dd,
         type: 3}
       propertyPath: m_Name
@@ -19999,6 +20014,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1613807075}
     m_Modifications:
+    - target: {fileID: 2867985984593711911, guid: 2279b582e7d972a44b6f031293a1ef01,
+        type: 3}
+      propertyPath: duration
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 5564827695739852497, guid: 2279b582e7d972a44b6f031293a1ef01,
         type: 3}
       propertyPath: m_VideoClip
@@ -51248,12 +51268,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1613807075}
     m_Modifications:
+    - target: {fileID: 2867985984593711911, guid: 2279b582e7d972a44b6f031293a1ef01,
+        type: 3}
+      propertyPath: duration
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5564827695739852497, guid: 2279b582e7d972a44b6f031293a1ef01,
         type: 3}
       propertyPath: m_VideoClip
       value: 
       objectReference: {fileID: 32900000, guid: 6d72743230905e8429d4386076000578,
         type: 3}
+    - target: {fileID: 8271690466919183816, guid: 2279b582e7d972a44b6f031293a1ef01,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9013274413083855284, guid: 2279b582e7d972a44b6f031293a1ef01,
         type: 3}
       propertyPath: duration
