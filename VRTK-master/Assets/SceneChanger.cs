@@ -204,4 +204,9 @@ public class SceneChanger : MonoBehaviour
 
         rend.material.SetColor("_Color", newColorFinal);
     }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }

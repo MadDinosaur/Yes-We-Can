@@ -2086,7 +2086,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Touched.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 143932173}
+      objectReference: {fileID: 0}
     - target: {fileID: 1437597854603411009, guid: 0f122c017d53aa542a9a23ce4f9ba27e,
         type: 3}
       propertyPath: Touched.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -2165,18 +2165,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 143932171}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &143932173 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5788404594761134998, guid: 0f122c017d53aa542a9a23ce4f9ba27e,
-    type: 3}
-  m_PrefabInstance: {fileID: 143932171}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a32647d1757af1468b8407316d78194, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &145421263
 GameObject:
   m_ObjectHideFlags: 0
@@ -20106,6 +20094,21 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 0.3621694
       objectReference: {fileID: 0}
+    - target: {fileID: 4163037935098094082, guid: fcc50a6038acca74cb5622fb36d1e9dd,
+        type: 3}
+      propertyPath: buildHeight
+      value: 0.649
+      objectReference: {fileID: 0}
+    - target: {fileID: 4163037935098094082, guid: fcc50a6038acca74cb5622fb36d1e9dd,
+        type: 3}
+      propertyPath: editorHeight
+      value: -0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4163037935098094082, guid: fcc50a6038acca74cb5622fb36d1e9dd,
+        type: 3}
+      propertyPath: build
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4344062202217795454, guid: fcc50a6038acca74cb5622fb36d1e9dd,
         type: 3}
       propertyPath: m_Enabled
@@ -23110,27 +23113,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ba5508f1fd2aa44b980ea2e942d3ee8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1533659389 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8958071809580577721, guid: fcc50a6038acca74cb5622fb36d1e9dd,
-    type: 3}
-  m_PrefabInstance: {fileID: 1362920837}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1533659391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1533659389}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a4c7dc35cf256f4c9fd5cbcbd434188, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buildHeight: 0.649
-  editorHeight: -0.3
-  build: 1
 --- !u!4 &1539721608 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9051746521724193865, guid: f4ebfd37843e55f468b04cd64f74d597,
