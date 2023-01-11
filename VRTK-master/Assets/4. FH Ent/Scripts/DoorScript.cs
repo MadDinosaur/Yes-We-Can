@@ -4,20 +4,6 @@ using UnityEngine;
 
 public class DoorScript : MonoBehaviour
 {
-    public float speed = 0.5f;
-    public float duration = 5;
-    public bool openOnStart;
-
-    enum status
-    {
-        Opening,
-        Open,
-        Waiting,
-        Closing,
-        Closed
-    }
-    status doorStatus;
-
     const int openDoorRightPosition = 90;
 
     Transform doorLeft;
@@ -41,8 +27,8 @@ public class DoorScript : MonoBehaviour
                 doorRight.transform.eulerAngles = newRotation;
             }
         }
-
-        if (openOnStart) doorStatus = status.Opening;
+        
+        
     }
 
     List<Transform> GetChildren(Transform parent, bool recursive) {
@@ -61,60 +47,17 @@ public class DoorScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch(doorStatus)
-        {
-            case status.Opening:
-                openDoor();
-                break;
-            case status.Open:
-                StartCoroutine(WaitToClose());
-                break;
-            case status.Closing:
-                closeDoor();
-                break;
-        }
+        openDoorRight();
     }
 
-    public void openDoors()
-    {
-        doorStatus = status.Opening;
-    }
-
-    void openDoor() {
+    void openDoorRight() {
         Vector3 newRotation = doorRight.transform.eulerAngles;
-        if (newRotation.y < openDoorRightPosition)
-        {
-            newRotation.y += speed;
+        if (newRotation.y < openDoorRightPosition) {
+            newRotation.y += 0.5f;
             doorRight.transform.eulerAngles = newRotation;
 
             newRotation.y = -newRotation.y;
             doorLeft.transform.eulerAngles = newRotation;
-        }
-        else doorStatus = status.Open;
-    }
-
-    void closeDoor()
-    {
-        doorStatus = status.Closing;
-
-        Vector3 newRotation = doorRight.transform.eulerAngles;
-        if (newRotation.y > 0 && newRotation.y <= openDoorRightPosition + speed)
-        {
-            newRotation.y -= speed;
-            doorRight.transform.eulerAngles = newRotation;
-
-            newRotation.y = -newRotation.y;
-            doorLeft.transform.eulerAngles = newRotation;
-        }
-        else doorStatus = status.Closed;
-    }
-
-    IEnumerator WaitToClose()
-    {
-        doorStatus = status.Waiting;
-
-        yield return new WaitForSeconds(duration);
-
-        closeDoor();
+        } 
     }
 }
