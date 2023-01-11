@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using TMPro;
 using System;
 
@@ -13,8 +14,12 @@ public class ScorePoint : MonoBehaviour
     public TMP_Text timeBox;
     public Animator[] peopleAnimators = new Animator[9];
     public AnimatorControllerParameter animator;
+    public ScoreEvent onScored;
     //System.Random rnd = new System.Random();
-    
+
+    [Serializable]
+    public class ScoreEvent : UnityEvent { }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +49,7 @@ public class ScorePoint : MonoBehaviour
                 peopleAnimator.SetTrigger("Cheer");
                 peopleAnimator.SetInteger("AnimationNum", UnityEngine.Random.Range(1, 4));
             }
+            onScored.Invoke();
         }
     }
 }

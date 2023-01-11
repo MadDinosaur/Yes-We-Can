@@ -947,6 +947,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Hand
       objectReference: {fileID: 0}
+    - target: {fileID: 4764839377489114691, guid: a4f3d42732897f941b72197a47d3e974,
+        type: 3}
+      propertyPath: m_TagString
+      value: Headset
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4f3d42732897f941b72197a47d3e974, type: 3}
 --- !u!114 &3710209173803252651 stripped
@@ -2214,6 +2219,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Hand
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764839377489114691, guid: a4f3d42732897f941b72197a47d3e974,
+        type: 3}
+      propertyPath: m_TagString
+      value: Headset
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4f3d42732897f941b72197a47d3e974, type: 3}
