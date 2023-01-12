@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 5583501845457625144}
   - component: {fileID: 5583501845457625147}
   m_Layer: 8
-  m_Name: PenHolderV1F (2)
+  m_Name: Interactable.Glasses
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12822,37 +12822,37 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 8e9f90a0f554a654c8c61c4c0af1e979,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.1334532
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8e9f90a0f554a654c8c61c4c0af1e979,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.2570565
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8e9f90a0f554a654c8c61c4c0af1e979,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.077385
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8e9f90a0f554a654c8c61c4c0af1e979,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.47710866
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8e9f90a0f554a654c8c61c4c0af1e979,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.5218883
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8e9f90a0f554a654c8c61c4c0af1e979,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.52188826
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8e9f90a0f554a654c8c61c4c0af1e979,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.47710866
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8e9f90a0f554a654c8c61c4c0af1e979,
         type: 3}
@@ -12862,7 +12862,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 8e9f90a0f554a654c8c61c4c0af1e979,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -89.98
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8e9f90a0f554a654c8c61c4c0af1e979,
         type: 3}
@@ -12872,7 +12872,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 8e9f90a0f554a654c8c61c4c0af1e979,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 95.133
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8e9f90a0f554a654c8c61c4c0af1e979,
         type: 3}
