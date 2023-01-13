@@ -9,14 +9,14 @@ public class Highlighter : MonoBehaviour
     public Material highlightMaterial;
     public string key;
 
-    PianoSongController controller;
+    SongController controller;
     Material standardMaterial;
     
 
     // Start is called before the first frame update
     void Start()
     {
-        controller = GetComponentInParent<PianoSongController>();
+        controller = GetComponentInParent<SongController>();
         standardMaterial = meshRenderer.material;
     }
 

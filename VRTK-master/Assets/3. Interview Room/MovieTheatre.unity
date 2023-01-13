@@ -1148,6 +1148,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Put_on_Oculus_Prompt
       objectReference: {fileID: 0}
+    - target: {fileID: 4624730617374343515, guid: c7a35313daff24945b66f6eb5fb796d1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ignore Collision Fade
+      objectReference: {fileID: 0}
     - target: {fileID: 6020726910897352229, guid: c7a35313daff24945b66f6eb5fb796d1,
         type: 3}
       propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -1267,13 +1272,13 @@ PrefabInstance:
         type: 3}
       propertyPath: videoClips.Array.data[0]
       value: 
-      objectReference: {fileID: 32900000, guid: 9daa23e52c2c12d4b94e53f9a7290fad,
+      objectReference: {fileID: 32900000, guid: 267a1987c1b130e4caacab688deea8b9,
         type: 3}
     - target: {fileID: 4225821302562823625, guid: fcc50a6038acca74cb5622fb36d1e9dd,
         type: 3}
       propertyPath: videoClips.Array.data[1]
       value: 
-      objectReference: {fileID: 32900000, guid: d1e1638d43221ab408264f0a5a478639,
+      objectReference: {fileID: 32900000, guid: 267a1987c1b130e4caacab688deea8b9,
         type: 3}
     - target: {fileID: 4225821302562823625, guid: fcc50a6038acca74cb5622fb36d1e9dd,
         type: 3}
