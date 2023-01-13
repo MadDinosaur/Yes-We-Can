@@ -48,6 +48,8 @@ public class SceneChanger : MonoBehaviour
                 case (GameMode.Dyslexia):
                     videoPlayer.clip = videoClips[2];
                     break;
+                default:
+                    break;
             }
             playVideoOnStart = false;
         }
@@ -71,6 +73,8 @@ public class SceneChanger : MonoBehaviour
                     GameObject.Find("LUKAS").SetActive(false);
                     GameObject.Find("SARA").SetActive(true);
                     GameObject.Find("THERESA").SetActive(false);
+                    break;
+                default:
                     break;
             }
             enableObjectsOnStart = false;
