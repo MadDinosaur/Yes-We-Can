@@ -16,6 +16,7 @@ public class SceneChanger : MonoBehaviour
     static GameMode gameMode;
     static bool isInterviewOnly;
     static bool playVideoOnStart;
+    static bool enableObjectsOnStart;
 
     [SerializeField]
     public VideoClip[] videoClips = new VideoClip[3];
@@ -48,6 +49,31 @@ public class SceneChanger : MonoBehaviour
                     videoPlayer.clip = videoClips[2];
                     break;
             }
+            playVideoOnStart = false;
+        }
+
+        if (enableObjectsOnStart)
+        {
+            //Searches for character section and enables it
+            switch (gameMode)
+            {
+                case (GameMode.Wheelchair):
+                    GameObject.Find("LUKAS").SetActive(true);
+                    GameObject.Find("SARA").SetActive(false);
+                    GameObject.Find("THERESA").SetActive(false);
+                    break;
+                case (GameMode.Blindess):
+                    GameObject.Find("LUKAS").SetActive(false);
+                    GameObject.Find("SARA").SetActive(false);
+                    GameObject.Find("THERESA").SetActive(true);
+                    break;
+                case (GameMode.Dyslexia):
+                    GameObject.Find("LUKAS").SetActive(false);
+                    GameObject.Find("SARA").SetActive(true);
+                    GameObject.Find("THERESA").SetActive(false);
+                    break;
+            }
+            enableObjectsOnStart = false;
         }
     }
 
@@ -105,7 +131,11 @@ public class SceneChanger : MonoBehaviour
     {
         playVideoOnStart = false;
         if (isInterviewOnly) GoToMainMenu();
-        else LoadScene("FHEntr");
+        else
+        {
+            enableObjectsOnStart = true;
+            LoadScene("FHEntr");
+        }
     }
 
     public void LeaveFHEntrance()
