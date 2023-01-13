@@ -1183,6 +1183,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1106595456165838335, guid: fcc50a6038acca74cb5622fb36d1e9dd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 1191716758026239286, guid: fcc50a6038acca74cb5622fb36d1e9dd,
         type: 3}
       propertyPath: elementVisibility
@@ -1285,6 +1290,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5969778501791003960, guid: fcc50a6038acca74cb5622fb36d1e9dd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7219707499632112379, guid: fcc50a6038acca74cb5622fb36d1e9dd,
         type: 3}

@@ -5727,7 +5727,7 @@ PrefabInstance:
     - target: {fileID: 297356389, guid: 2279b582e7d972a44b6f031293a1ef01, type: 3}
       propertyPath: followerIndicator
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1142160762}
     - target: {fileID: 1251265844580659080, guid: 2279b582e7d972a44b6f031293a1ef01,
         type: 3}
       propertyPath: duration
@@ -9599,7 +9599,7 @@ PrefabInstance:
     - target: {fileID: 297356389, guid: 2279b582e7d972a44b6f031293a1ef01, type: 3}
       propertyPath: followerIndicator
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1142160762}
     - target: {fileID: 1251265844580659080, guid: 2279b582e7d972a44b6f031293a1ef01,
         type: 3}
       propertyPath: duration
@@ -11061,6 +11061,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1142160759}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1142160762 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8953205467668524806, guid: fcc50a6038acca74cb5622fb36d1e9dd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1142160759}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1145611730
 GameObject:
   m_ObjectHideFlags: 0
@@ -11815,7 +11821,7 @@ PrefabInstance:
     - target: {fileID: 297356389, guid: 2279b582e7d972a44b6f031293a1ef01, type: 3}
       propertyPath: followerIndicator
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1142160762}
     - target: {fileID: 1251265844580659080, guid: 2279b582e7d972a44b6f031293a1ef01,
         type: 3}
       propertyPath: duration
@@ -25170,7 +25176,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_VideoClip
       value: 
-      objectReference: {fileID: 32900000, guid: a865f03c506499f4cbe2bf3af7fcfef9,
+      objectReference: {fileID: 32900000, guid: 20dc0a255ccd58b48b479d8b11ecf11a,
         type: 3}
     - target: {fileID: 3387105959150199336, guid: d14df552c61c0c744b3ed626c5476515,
         type: 3}
@@ -25236,7 +25242,7 @@ PrefabInstance:
         type: 3}
       propertyPath: followerIndicator
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1142160762}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d14df552c61c0c744b3ed626c5476515, type: 3}
 --- !u!33 &1351322090880758579

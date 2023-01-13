@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class PianoSongController : MonoBehaviour
+public class SongController : MonoBehaviour
 {
     public List<string> notesequence = new List<string>{ "C5", "B4", "A4", "G4", "F4", "G4", "A4", "C5", "B4", "A4", "C5", "F4", "E4" };
     List<string> currentsequence = new List<string>();
