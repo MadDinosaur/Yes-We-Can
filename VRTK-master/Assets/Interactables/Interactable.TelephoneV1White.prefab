@@ -4375,6 +4375,19 @@ MonoBehaviour:
         m_CallState: 2
   receiveValidity:
     field: {fileID: 0}
+--- !u!65 &6813579291761376224
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4497670996620298009}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.13664104, y: 0.039141472, z: 0.16228752}
+  m_Center: {x: -0.06832052, y: 0.019570736, z: 0.08114376}
 --- !u!1 &3669483660014013606
 GameObject:
   m_ObjectHideFlags: 0
@@ -5605,7 +5618,7 @@ GameObject:
   - component: {fileID: 8660113781514644915}
   - component: {fileID: 2387071706987427533}
   m_Layer: 8
-  m_Name: Interactable.Bottle (32)
+  m_Name: Interactable.TelephoneV1White
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12884,6 +12897,12 @@ PrefabInstance:
 --- !u!4 &3828410829264461219 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c064503448451a149972a9c92bf0f0ab,
+    type: 3}
+  m_PrefabInstance: {fileID: 3651159398973995592}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4497670996620298009 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c064503448451a149972a9c92bf0f0ab,
     type: 3}
   m_PrefabInstance: {fileID: 3651159398973995592}
   m_PrefabAsset: {fileID: 0}

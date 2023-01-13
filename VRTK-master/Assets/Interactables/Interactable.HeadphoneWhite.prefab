@@ -2048,7 +2048,7 @@ GameObject:
   - component: {fileID: 5962683806534779077}
   - component: {fileID: 5962683806534779076}
   m_Layer: 8
-  m_Name: Interactable.Bottle (23)
+  m_Name: Interactable.HeadphoneWhite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12812,6 +12812,19 @@ MonoBehaviour:
       m_Calls: []
   receiveValidity:
     field: {fileID: 0}
+--- !u!65 &9194214321419932684
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7798600762993296965}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.2809048, y: 0.261005, z: 0.14379537}
+  m_Center: {x: -0.12359469, y: 0.11363041, z: 0.042666633}
 --- !u!1001 &6988280139255872276
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12881,6 +12894,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37478d6ff056dc24aa3f805705b4dd79, type: 3}
+--- !u!1 &7798600762993296965 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 37478d6ff056dc24aa3f805705b4dd79,
+    type: 3}
+  m_PrefabInstance: {fileID: 6988280139255872276}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7453988171026406655 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 37478d6ff056dc24aa3f805705b4dd79,

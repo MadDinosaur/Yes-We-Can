@@ -2617,7 +2617,7 @@ GameObject:
   - component: {fileID: 5854863991376932248}
   - component: {fileID: 5854863991376932251}
   m_Layer: 8
-  m_Name: Interactable.Bottle (27)
+  m_Name: Interactable.PenMarkerV1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10262,6 +10262,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!65 &6981513429582883165
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6737893111663761464}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.019288925, y: 0.022281913, z: 0.10479098}
+  m_Center: {x: -0.006752945, y: 0.007931813, z: -0.055043902}
 --- !u!1 &5854863992676675154
 GameObject:
   m_ObjectHideFlags: 0
@@ -12884,6 +12897,12 @@ PrefabInstance:
 --- !u!4 &6253844819285983874 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 82fd5dc76a67a0d479a2ae9f91e0dd10,
+    type: 3}
+  m_PrefabInstance: {fileID: 5854863992669349225}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6737893111663761464 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 82fd5dc76a67a0d479a2ae9f91e0dd10,
     type: 3}
   m_PrefabInstance: {fileID: 5854863992669349225}
   m_PrefabAsset: {fileID: 0}

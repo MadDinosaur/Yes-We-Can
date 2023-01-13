@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!65 &4379081915803894310
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5823075922493732991}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.046474915, y: 0.12187539, z: 0.04815397}
+  m_Center: {x: -0.023237428, y: 0.060937695, z: 0.024077008}
 --- !u!1 &6145084515311293876
 GameObject:
   m_ObjectHideFlags: 0
@@ -12537,7 +12550,7 @@ GameObject:
   - component: {fileID: 6145084517395230797}
   - component: {fileID: 6145084517395230794}
   m_Layer: 8
-  m_Name: Interactable.Bottle (21)
+  m_Name: Interactable.Handsanitizer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12881,6 +12894,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 222fa4f65f74d9643aed80d3d7f205d4, type: 3}
+--- !u!1 &5823075922493732991 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 222fa4f65f74d9643aed80d3d7f205d4,
+    type: 3}
+  m_PrefabInstance: {fileID: 6633469524032308526}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6594510239128494789 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 222fa4f65f74d9643aed80d3d7f205d4,

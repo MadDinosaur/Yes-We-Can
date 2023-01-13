@@ -8301,6 +8301,19 @@ MonoBehaviour:
   outputGrabAction: {fileID: 5360438662581751780}
   outputUngrabAction: {fileID: 615974486001166040}
   outputUngrabOnUntouchAction: {fileID: 7888505047681395964}
+--- !u!65 &6188508297987874588
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6568197697176133567}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.2809048, y: 0.26100507, z: 0.14379539}
+  m_Center: {x: -0.12359469, y: 0.11363043, z: 0.04266654}
 --- !u!1 &6639982076096222933
 GameObject:
   m_ObjectHideFlags: 0
@@ -12886,6 +12899,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59620ba58e2c69f468d3dcec1c86710a, type: 3}
+--- !u!1 &6568197697176133567 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 59620ba58e2c69f468d3dcec1c86710a,
+    type: 3}
+  m_PrefabInstance: {fileID: 6334177432470676206}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5795356112492987653 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 59620ba58e2c69f468d3dcec1c86710a,

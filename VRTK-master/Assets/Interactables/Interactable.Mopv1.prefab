@@ -6810,7 +6810,7 @@ GameObject:
   - component: {fileID: 2599062688898505968}
   - component: {fileID: 2599062688898505975}
   m_Layer: 8
-  m_Name: Interactable.Bottle (24)
+  m_Name: Interactable.Mopv1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12812,6 +12812,19 @@ MonoBehaviour:
   currentIndex: 0
   elements:
   - {fileID: 0}
+--- !u!65 &2096246836371823888
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2941079733711428499}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.43137926, y: 1.3036915, z: 0.14440347}
+  m_Center: {x: -0.19999981, y: 0.6453665, z: 0.19999999}
 --- !u!1001 &2599062688012527298
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12881,6 +12894,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a24d3f87dfbce474c9b6b95abaea5f17, type: 3}
+--- !u!1 &2941079733711428499 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a24d3f87dfbce474c9b6b95abaea5f17,
+    type: 3}
+  m_PrefabInstance: {fileID: 2599062688012527298}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2565645254351388969 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a24d3f87dfbce474c9b6b95abaea5f17,

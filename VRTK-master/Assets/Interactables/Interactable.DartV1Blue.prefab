@@ -11125,7 +11125,7 @@ GameObject:
   - component: {fileID: 2605260432645131198}
   - component: {fileID: 2605260432645131199}
   m_Layer: 8
-  m_Name: Interactable.Bottle (28)
+  m_Name: Interactable.DartV1Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12812,6 +12812,19 @@ MonoBehaviour:
         m_CallState: 2
   receiveValidity:
     field: {fileID: 0}
+--- !u!65 &1856366161810457231
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4567107863326305951}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.012038841, y: 0.012512921, z: 0.07631718}
+  m_Center: {x: -0.0056090127, y: 0.0062564607, z: -0.03815859}
 --- !u!1001 &3720195078153049038
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12884,6 +12897,12 @@ PrefabInstance:
 --- !u!4 &3758940860180689957 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9346ca793fe20a44693f9c99c58ad3df,
+    type: 3}
+  m_PrefabInstance: {fileID: 3720195078153049038}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4567107863326305951 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9346ca793fe20a44693f9c99c58ad3df,
     type: 3}
   m_PrefabInstance: {fileID: 3720195078153049038}
   m_PrefabAsset: {fileID: 0}

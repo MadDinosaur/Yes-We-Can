@@ -1413,7 +1413,7 @@ GameObject:
   - component: {fileID: 3507083667165288946}
   - component: {fileID: 3507083667165288945}
   m_Layer: 8
-  m_Name: Interactable.Bottle (20)
+  m_Name: Interactable.Flower02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12812,6 +12812,19 @@ MonoBehaviour:
   - {fileID: 3507083668324830840}
   - {fileID: 3507083668873760079}
   - {fileID: 3507083667874658418}
+--- !u!65 &5037548197049509762
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6388943581054779397}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &6388943581054879397
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12869,6 +12882,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1575568507977bb41a464f71c73e5527, type: 3}
+--- !u!1 &6388943581054779397 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 1575568507977bb41a464f71c73e5527,
+    type: 3}
+  m_PrefabInstance: {fileID: 6388943581054879397}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6388943581055278117 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 1575568507977bb41a464f71c73e5527,

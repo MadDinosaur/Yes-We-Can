@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -585,7 +585,7 @@ PrefabInstance:
     - target: {fileID: 3205135874747288567, guid: 0cdaa8c090e071545be07d9bed99953b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.427
+      value: 7.552
       objectReference: {fileID: 0}
     - target: {fileID: 3205135874747288567, guid: 0cdaa8c090e071545be07d9bed99953b,
         type: 3}
@@ -983,6 +983,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1451781036}
     m_Modifications:
+    - target: {fileID: 5155209630671421545, guid: 97f29475fa527de40815cd96d52a25cd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.105
+      objectReference: {fileID: 0}
     - target: {fileID: 8550533580337186213, guid: 97f29475fa527de40815cd96d52a25cd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -991,12 +996,12 @@ PrefabInstance:
     - target: {fileID: 8550533580337186213, guid: 97f29475fa527de40815cd96d52a25cd,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.074
+      value: 8.23
       objectReference: {fileID: 0}
     - target: {fileID: 8550533580337186213, guid: 97f29475fa527de40815cd96d52a25cd,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 25.052
+      value: 25.225
       objectReference: {fileID: 0}
     - target: {fileID: 8550533580337186213, guid: 97f29475fa527de40815cd96d52a25cd,
         type: 3}
@@ -14420,7 +14425,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7677332683513104486}
   m_LocalRotation: {x: -0.5101833, y: -0.48960507, z: 0.48960495, w: 0.5101832}
-  m_LocalPosition: {x: -5.557964, y: 0.62833965, z: -1.1941754}
+  m_LocalPosition: {x: -5.49, y: 2.39, z: -1.19}
   m_LocalScale: {x: 35.742, y: 35.742, z: 35.742}
   m_Children: []
   m_Father: {fileID: 3116578864164202373}
