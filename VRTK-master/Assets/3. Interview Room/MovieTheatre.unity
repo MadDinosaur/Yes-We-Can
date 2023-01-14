@@ -1261,7 +1261,7 @@ PrefabInstance:
     - target: {fileID: 4163037935098094082, guid: fcc50a6038acca74cb5622fb36d1e9dd,
         type: 3}
       propertyPath: buildHeight
-      value: 2.705
+      value: 2.62
       objectReference: {fileID: 0}
     - target: {fileID: 4163037935098094082, guid: fcc50a6038acca74cb5622fb36d1e9dd,
         type: 3}
@@ -1277,7 +1277,7 @@ PrefabInstance:
         type: 3}
       propertyPath: videoClips.Array.data[0]
       value: 
-      objectReference: {fileID: 32900000, guid: 267a1987c1b130e4caacab688deea8b9,
+      objectReference: {fileID: 32900000, guid: 9daa23e52c2c12d4b94e53f9a7290fad,
         type: 3}
     - target: {fileID: 4225821302562823625, guid: fcc50a6038acca74cb5622fb36d1e9dd,
         type: 3}
@@ -1292,6 +1292,11 @@ PrefabInstance:
       objectReference: {fileID: 32900000, guid: 9a772c8a3f16c7e4a8b6b47f8e29d7a6,
         type: 3}
     - target: {fileID: 4524418137443270623, guid: fcc50a6038acca74cb5622fb36d1e9dd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4925361732840960460, guid: fcc50a6038acca74cb5622fb36d1e9dd,
         type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1326,10 +1331,20 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 8516996084882348315, guid: fcc50a6038acca74cb5622fb36d1e9dd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8958071808393808468, guid: fcc50a6038acca74cb5622fb36d1e9dd,
         type: 3}
       propertyPath: m_Name
       value: ===VR===
+      objectReference: {fileID: 0}
+    - target: {fileID: 8958071808393808468, guid: fcc50a6038acca74cb5622fb36d1e9dd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8958071808393808469, guid: fcc50a6038acca74cb5622fb36d1e9dd,
         type: 3}
