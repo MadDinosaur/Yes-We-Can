@@ -16,7 +16,6 @@ public class RespawnUngrabbed : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Vector3.Distance(transform.position, startPosition));
         if (Vector3.Distance(transform.position, startPosition) > threshold)
         {
             transform.position = startPosition;
