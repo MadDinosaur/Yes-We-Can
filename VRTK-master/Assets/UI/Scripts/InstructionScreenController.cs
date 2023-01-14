@@ -41,6 +41,10 @@ public class InstructionScreenController : MonoBehaviour
 
     public void checkOverlap()
     {
-        if (isActive()) Trigger();
+        if (isActive())
+        {
+            instructionScreen.SetActive(!instructionScreen.activeSelf);
+            if (!gameStartTrigger) gameStartTrigger = true;
+        }
     }
 }

@@ -39,6 +39,10 @@ public class MiniMenuController : MonoBehaviour
 
     public void checkOverlap()
     {
-        if (isActive()) Trigger();
+        if (isActive())
+        {
+            miniMenu.SetActive(!miniMenu.activeSelf);
+            if (!pointerAlwaysOn) pointer.SetActive(!pointer.activeSelf);
+        }
     }
 }
