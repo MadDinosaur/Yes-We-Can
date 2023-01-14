@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using Zinnia.Pointer;
 
 public class ProjectorScreen : MonoBehaviour
@@ -13,6 +14,9 @@ public class ProjectorScreen : MonoBehaviour
     
     float targetPosY;
     float targetScaleY;
+
+    public UnityEvent menuTriggered;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +40,7 @@ public class ProjectorScreen : MonoBehaviour
                 transform.position = new Vector3(transform.position.x, transform.position.y - speed/2, transform.position.z);
             } else
             {
+                menuTriggered.Invoke();
                 isRemoteActive = false;
                 menu.SetActive(true);
                 gameObject.SetActive(false);
