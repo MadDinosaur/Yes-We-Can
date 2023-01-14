@@ -22,7 +22,7 @@ public class MiniMenuController : MonoBehaviour
         
     }
 
-    public void trigger()
+    public void Trigger()
     {
         miniMenu.SetActive(!miniMenu.activeSelf);
         if (!pointerAlwaysOn) pointer.SetActive(!pointer.activeSelf);

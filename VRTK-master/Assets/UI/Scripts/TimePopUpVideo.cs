@@ -5,13 +5,36 @@ using UnityEngine;
 public class TimePopUpVideo : MonoBehaviour
 {
     public GameObject uiObject;
+    public InstructionScreenController controller;
     public float duration;
+    enum status
+    {
+        Standby,
+        Started,
+        Playing
+    }
+    status readyToTrigger = status.Standby;
 
     // Start is called before the first frame update
     void Start()
     {
         uiObject.SetActive(false);
-        StartCoroutine(WaitForTimeTrigger(duration));
+    }
+
+    void Update()
+    {
+        switch (readyToTrigger)
+        {
+            case status.Standby:
+                readyToTrigger = controller.IsGameStarted() ?  status.Started : status.Standby;
+                break;
+            case status.Started:
+                StartCoroutine(WaitForTimeTrigger(duration));
+                readyToTrigger = status.Playing;
+                break;
+            default:
+                break;
+        }
     }
 
     IEnumerator WaitForVoiceLine(float seconds)
