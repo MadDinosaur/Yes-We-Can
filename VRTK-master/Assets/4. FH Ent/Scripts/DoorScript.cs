@@ -67,12 +67,12 @@ public class DoorScript : MonoBehaviour
             case status.Opening:
                 openDoor();
                 break;
-            case status.Open:
+            /*case status.Open:
                 StartCoroutine(WaitToClose());
                 break;
             case status.Closing:
                 closeDoor();
-                break;
+                break;*/
         }
     }
 
