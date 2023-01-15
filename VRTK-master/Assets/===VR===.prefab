@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &299944534
 Transform:
   m_ObjectHideFlags: 0
@@ -804,7 +804,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cc066adeb5abeab4a986da75e22d65c2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a2e23a797a9b1a74396a8ae3669ef3ad, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1878,8 +1878,11 @@ MonoBehaviour:
   pointer: {fileID: 4524418137443270623}
   instructionScreen: {fileID: 4925361732840960460}
   images:
-  - {fileID: 21300000, guid: cc066adeb5abeab4a986da75e22d65c2, type: 3}
-  - {fileID: 21300000, guid: 2802c247a4e3d6642b7fbf2f6119d0fa, type: 3}
+  - {fileID: 21300000, guid: a2e23a797a9b1a74396a8ae3669ef3ad, type: 3}
+  - {fileID: 21300000, guid: 9b10c6e8628ff7b4498ccf1fe54d7170, type: 3}
+  - {fileID: 21300000, guid: 5bf2ebdce754f9342a5acd893d8243fc, type: 3}
+  - {fileID: 21300000, guid: f04bba71456e3a54995876985f60d283, type: 3}
+  - {fileID: 21300000, guid: 49976611d3fc4e5468df22a972e31eae, type: 3}
 --- !u!1001 &962234746552998
 PrefabInstance:
   m_ObjectHideFlags: 0
