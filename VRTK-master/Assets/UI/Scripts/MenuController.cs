@@ -49,10 +49,10 @@ public class MenuController : MonoBehaviour
     public void NavigateInstructions()
     {
         if (!instructionScreen.activeSelf) return;
-
-        instructionScreen.GetComponent<Image>().sprite = images[index];
+        
         index += 1;
-
         if (index == images.Count) { TriggerInstructionScreen(); index = 0; }
+        
+        instructionScreen.GetComponentInChildren<Image>().sprite = images[index];
     }
 }
