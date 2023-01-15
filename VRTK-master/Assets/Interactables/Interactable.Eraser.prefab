@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!65 &7111407665645692020
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143531437514892920}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.006501465, y: 0.0036112738, z: 0.022403996}
+  m_Center: {x: -0.003250719, y: 0.0018056628, z: -0.011201968}
 --- !u!1 &311619750139882362
 GameObject:
   m_ObjectHideFlags: 0
@@ -4796,7 +4809,7 @@ MonoBehaviour:
   inputGrabSetup: {fileID: 311619752080187326}
   inputUngrabReset: {fileID: 311619750554499831}
   followTracking: 0
-  grabOffset: 0
+  grabOffset: 2
   isKinematicWhenActive: 1
   isKinematicWhenInactive: 0
   willInheritIsKinematicWhenInactiveFromConsumerRigidbody: 1
@@ -12812,19 +12825,6 @@ MonoBehaviour:
         m_CallState: 2
   receiveValidity:
     field: {fileID: 0}
---- !u!65 &7111407665645692020
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 143531437514892920}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.006501465, y: 0.0036112738, z: 0.022403996}
-  m_Center: {x: -0.003250719, y: 0.0018056628, z: -0.011201968}
 --- !u!1001 &953783203261324073
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12894,15 +12894,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 539d5c606443de749887b2c713c94300, type: 3}
---- !u!4 &771872248261606594 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 539d5c606443de749887b2c713c94300,
-    type: 3}
-  m_PrefabInstance: {fileID: 953783203261324073}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &143531437514892920 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 539d5c606443de749887b2c713c94300,
+    type: 3}
+  m_PrefabInstance: {fileID: 953783203261324073}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &771872248261606594 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 539d5c606443de749887b2c713c94300,
     type: 3}
   m_PrefabInstance: {fileID: 953783203261324073}
   m_PrefabAsset: {fileID: 0}

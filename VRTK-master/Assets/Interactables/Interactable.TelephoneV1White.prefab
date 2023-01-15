@@ -1332,7 +1332,7 @@ MonoBehaviour:
   inputGrabSetup: {fileID: 1684000374485251736}
   inputUngrabReset: {fileID: 3173988087289079954}
   followTracking: 0
-  grabOffset: 0
+  grabOffset: 2
   isKinematicWhenActive: 1
   isKinematicWhenInactive: 0
   willInheritIsKinematicWhenInactiveFromConsumerRigidbody: 1
@@ -4375,19 +4375,6 @@ MonoBehaviour:
         m_CallState: 2
   receiveValidity:
     field: {fileID: 0}
---- !u!65 &6813579291761376224
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4497670996620298009}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.13664104, y: 0.039141472, z: 0.16228752}
-  m_Center: {x: -0.06832052, y: 0.019570736, z: 0.08114376}
 --- !u!1 &3669483660014013606
 GameObject:
   m_ObjectHideFlags: 0
@@ -5336,6 +5323,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!65 &6813579291761376224
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4497670996620298009}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.13664104, y: 0.039141472, z: 0.16228752}
+  m_Center: {x: -0.06832052, y: 0.019570736, z: 0.08114376}
 --- !u!1 &4526682490873950251
 GameObject:
   m_ObjectHideFlags: 0

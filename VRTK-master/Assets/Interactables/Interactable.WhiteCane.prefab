@@ -8232,7 +8232,7 @@ GameObject:
   - component: {fileID: 6337944518196585445}
   - component: {fileID: 6337944518196585446}
   m_Layer: 8
-  m_Name: PenHolderV1F (1)
+  m_Name: Interactable.WhiteCane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17343,7 +17343,7 @@ MonoBehaviour:
   inputGrabSetup: {fileID: 6337944519059517486}
   inputUngrabReset: {fileID: 6337944519212784467}
   followTracking: 0
-  grabOffset: 0
+  grabOffset: 2
   isKinematicWhenActive: 1
   isKinematicWhenInactive: 0
   willInheritIsKinematicWhenInactiveFromConsumerRigidbody: 1
