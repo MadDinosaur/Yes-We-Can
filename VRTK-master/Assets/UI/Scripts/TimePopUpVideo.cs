@@ -5,7 +5,7 @@ using UnityEngine;
 public class TimePopUpVideo : MonoBehaviour
 {
     public GameObject uiObject;
-    public InstructionScreenController controller;
+    public MenuController controller;
     public float duration;
     enum status
     {

@@ -46,6 +46,11 @@ public class MenuController : MonoBehaviour
         }
     }
 
+    public bool IsGameStarted()
+    {
+        return gameStartTrigger;
+    }
+
     public void NavigateInstructions()
     {
         if (!instructionScreen.activeSelf) return;
