@@ -3894,7 +3894,7 @@ MonoBehaviour:
   inputGrabSetup: {fileID: 233495750843878208}
   inputUngrabReset: {fileID: 233495749931634178}
   followTracking: 0
-  grabOffset: 0
+  grabOffset: 2
   isKinematicWhenActive: 1
   isKinematicWhenInactive: 0
   willInheritIsKinematicWhenInactiveFromConsumerRigidbody: 1

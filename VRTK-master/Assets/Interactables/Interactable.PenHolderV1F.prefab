@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!65 &8295188758508301536
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4720212364289233422}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.052942898, y: 0.10801856, z: 0.043727595}
+  m_Center: {x: -0.027163846, y: 0.05400928, z: 0.019618256}
 --- !u!1 &5566723961509076878
 GameObject:
   m_ObjectHideFlags: 0
@@ -1856,19 +1869,6 @@ MonoBehaviour:
     xState: 1
     yState: 1
     zState: 1
---- !u!65 &8295188758508301536
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4720212364289233422}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.052942898, y: 0.10801856, z: 0.043727595}
-  m_Center: {x: -0.027163846, y: 0.05400928, z: 0.019618256}
 --- !u!1 &5566723961825686941
 GameObject:
   m_ObjectHideFlags: 0
@@ -8261,7 +8261,7 @@ MonoBehaviour:
   inputGrabSetup: {fileID: 5566723963491506986}
   inputUngrabReset: {fileID: 5566723963648880727}
   followTracking: 0
-  grabOffset: 0
+  grabOffset: 2
   isKinematicWhenActive: 1
   isKinematicWhenInactive: 0
   willInheritIsKinematicWhenInactiveFromConsumerRigidbody: 1
