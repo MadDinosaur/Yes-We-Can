@@ -195,7 +195,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2676492776533225793
 Transform:
   m_ObjectHideFlags: 0
@@ -1332,7 +1332,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1015353687596127724
 Transform:
   m_ObjectHideFlags: 0
@@ -2183,9 +2183,9 @@ MonoBehaviour:
   images:
   - {fileID: 21300000, guid: a2e23a797a9b1a74396a8ae3669ef3ad, type: 3}
   - {fileID: 21300000, guid: 9b10c6e8628ff7b4498ccf1fe54d7170, type: 3}
-  - {fileID: 21300000, guid: 5bf2ebdce754f9342a5acd893d8243fc, type: 3}
+  - {fileID: 21300000, guid: 6077458d291490b48b08ea5c6c992532, type: 3}
   - {fileID: 21300000, guid: f04bba71456e3a54995876985f60d283, type: 3}
-  - {fileID: 21300000, guid: e614726fdebf0d8458338dc7ab9dadab, type: 3}
+  - {fileID: 21300000, guid: e6020ebff264ce449ab637a751d7ba4c, type: 3}
 --- !u!1001 &962234746552998
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3574,7 +3574,7 @@ PrefabInstance:
     - target: {fileID: 3269626604758574079, guid: 71cacef91e7957d488f19d862c52040f,
         type: 3}
       propertyPath: m_text
-      value: RESTART
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3269626604758574079, guid: 71cacef91e7957d488f19d862c52040f,
         type: 3}
@@ -3736,12 +3736,12 @@ PrefabInstance:
     - target: {fileID: 5929266729557099691, guid: 71cacef91e7957d488f19d862c52040f,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.32131246
+      value: 0.123511985
       objectReference: {fileID: 0}
     - target: {fileID: 5929266729557099691, guid: 71cacef91e7957d488f19d862c52040f,
         type: 3}
       propertyPath: m_Center.x
-      value: -0.10919708
+      value: -0.11359729
       objectReference: {fileID: 0}
     - target: {fileID: 5929266729557099691, guid: 71cacef91e7957d488f19d862c52040f,
         type: 3}
@@ -3751,7 +3751,7 @@ PrefabInstance:
     - target: {fileID: 5929266729557099691, guid: 71cacef91e7957d488f19d862c52040f,
         type: 3}
       propertyPath: m_Center.z
-      value: 0.08899341
+      value: 0.0889934
       objectReference: {fileID: 0}
     - target: {fileID: 5929266729614952456, guid: 71cacef91e7957d488f19d862c52040f,
         type: 3}
@@ -3959,17 +3959,17 @@ PrefabInstance:
     - target: {fileID: 6020726910918489074, guid: 71cacef91e7957d488f19d862c52040f,
         type: 3}
       propertyPath: enabledActive.buttonText
-      value: RESTART
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6020726910918489074, guid: 71cacef91e7957d488f19d862c52040f,
         type: 3}
       propertyPath: disabledInactive.buttonText
-      value: RESTART
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6020726910918489074, guid: 71cacef91e7957d488f19d862c52040f,
         type: 3}
       propertyPath: disabledHover.buttonText
-      value: RESTART
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6020726910918489074, guid: 71cacef91e7957d488f19d862c52040f,
         type: 3}
@@ -4433,7 +4433,7 @@ PrefabInstance:
     - target: {fileID: 3269626604758574079, guid: 71cacef91e7957d488f19d862c52040f,
         type: 3}
       propertyPath: m_text
-      value: QUIT
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4314651968588608419, guid: 71cacef91e7957d488f19d862c52040f,
         type: 3}
@@ -4570,12 +4570,12 @@ PrefabInstance:
     - target: {fileID: 5929266729557099691, guid: 71cacef91e7957d488f19d862c52040f,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.33095327
+      value: 0.12309005
       objectReference: {fileID: 0}
     - target: {fileID: 5929266729557099691, guid: 71cacef91e7957d488f19d862c52040f,
         type: 3}
       propertyPath: m_Center.x
-      value: -0.103828594
+      value: -0.114935696
       objectReference: {fileID: 0}
     - target: {fileID: 5929266729557099691, guid: 71cacef91e7957d488f19d862c52040f,
         type: 3}
@@ -4797,12 +4797,12 @@ PrefabInstance:
     - target: {fileID: 6020726910918489074, guid: 71cacef91e7957d488f19d862c52040f,
         type: 3}
       propertyPath: disabledInactive.buttonText
-      value: NO
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6020726910918489074, guid: 71cacef91e7957d488f19d862c52040f,
         type: 3}
       propertyPath: disabledHover.buttonText
-      value: QUIT
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6020726910918489074, guid: 71cacef91e7957d488f19d862c52040f,
         type: 3}
@@ -4893,6 +4893,16 @@ PrefabInstance:
         type: 3}
       propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6020726910918489074, guid: 71cacef91e7957d488f19d862c52040f,
+        type: 3}
+      propertyPath: disabledInactive.isApplied
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6020726910918489074, guid: 71cacef91e7957d488f19d862c52040f,
+        type: 3}
+      propertyPath: disabledHover.isApplied
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6020726910918489075, guid: 71cacef91e7957d488f19d862c52040f,
         type: 3}
