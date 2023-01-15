@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6421930670393571706}
   - component: {fileID: 7976047006041880287}
   - component: {fileID: 5283966150284231189}
-  - component: {fileID: 3562266403208244311}
+  - component: {fileID: 7652653667621756307}
   m_Layer: 0
   m_Name: LaptopV1Black
   m_TagString: Untagged
@@ -80,7 +80,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &3562266403208244311
+--- !u!64 &7652653667621756307
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,5 +92,5 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 30
+  m_CookingOptions: -1
   m_Mesh: {fileID: -6764292411540528919, guid: 98096776b833d2d4ead823a654b3f38c, type: 3}
