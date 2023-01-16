@@ -25,17 +25,20 @@ public class DoorScript : MonoBehaviour
 
     void Start()
     {
-     
+
         List<Transform> children = GetChildren(transform, true);
 
-        foreach(Transform child in children) {
+        foreach (Transform child in children)
+        {
             Debug.Log(child.name);
-            if (child.name == "Door.002") {
+            if (child.name == "Door.002")
+            {
                 doorLeft = child;
                 Vector3 newRotation = new Vector3(89.98f, 0, 0);
                 doorLeft.transform.eulerAngles = newRotation;
             }
-            if (child.name == "Door.003") {
+            if (child.name == "Door.003")
+            {
                 doorRight = child;
                 Vector3 newRotation = new Vector3(89.98f, 0, 0);
                 doorRight.transform.eulerAngles = newRotation;
@@ -45,12 +48,15 @@ public class DoorScript : MonoBehaviour
         if (openOnStart) doorStatus = status.Opening;
     }
 
-    List<Transform> GetChildren(Transform parent, bool recursive) {
+    List<Transform> GetChildren(Transform parent, bool recursive)
+    {
         List<Transform> children = new List<Transform>();
 
-        foreach(Transform child in parent) {
+        foreach (Transform child in parent)
+        {
             children.Add(child);
-            if(recursive) {
+            if (recursive)
+            {
                 children.AddRange(GetChildren(child, true));
             }
         }
@@ -62,17 +68,17 @@ public class DoorScript : MonoBehaviour
     void Update()
     {
         Debug.Log(doorStatus);
-        switch(doorStatus)
+        switch (doorStatus)
         {
             case status.Opening:
                 openDoor();
                 break;
-            /*case status.Open:
-                StartCoroutine(WaitToClose());
-                break;
-            case status.Closing:
-                closeDoor();
-                break;*/
+                /*case status.Open:
+                    StartCoroutine(WaitToClose());
+                    break;
+                case status.Closing:
+                    closeDoor();
+                    break;*/
         }
     }
 
@@ -82,7 +88,8 @@ public class DoorScript : MonoBehaviour
         doorStatus = status.Opening;
     }
 
-    void openDoor() {
+    void openDoor()
+    {
         Vector3 newRotation = doorRight.transform.eulerAngles;
         Debug.Log(newRotation);
         if (newRotation.y <= openDoorRightPosition || newRotation.y > 360 - speed)
@@ -93,31 +100,38 @@ public class DoorScript : MonoBehaviour
             newRotation.y = -newRotation.y;
             doorLeft.transform.eulerAngles = newRotation;
         }
-        else doorStatus = status.Open;
-    }
-
-    void closeDoor()
-    {
-        doorStatus = status.Closing;
-
-        Vector3 newRotation = doorRight.transform.eulerAngles;
-        if (newRotation.y >= 0 && newRotation.y <= openDoorRightPosition + speed)
+        else
         {
-            newRotation.y -= speed;
-            doorRight.transform.eulerAngles = newRotation;
-
-            newRotation.y = -newRotation.y;
-            doorLeft.transform.eulerAngles = newRotation;
+            doorStatus = status.Open;
+            foreach (BoxCollider collider in GetComponentsInChildren<BoxCollider>())
+            {
+                collider.enabled = false;
+            }
         }
-        else doorStatus = status.Closed;
     }
 
-    IEnumerator WaitToClose()
-    {
-        doorStatus = status.Waiting;
+        void closeDoor()
+        {
+            doorStatus = status.Closing;
 
-        yield return new WaitForSeconds(duration);
+            Vector3 newRotation = doorRight.transform.eulerAngles;
+            if (newRotation.y >= 0 && newRotation.y <= openDoorRightPosition + speed)
+            {
+                newRotation.y -= speed;
+                doorRight.transform.eulerAngles = newRotation;
 
-        closeDoor();
+                newRotation.y = -newRotation.y;
+                doorLeft.transform.eulerAngles = newRotation;
+            }
+            else doorStatus = status.Closed;
+        }
+
+        IEnumerator WaitToClose()
+        {
+            doorStatus = status.Waiting;
+
+            yield return new WaitForSeconds(duration);
+
+            closeDoor();
+        }
     }
-}
