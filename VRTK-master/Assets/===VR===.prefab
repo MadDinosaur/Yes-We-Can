@@ -5155,7 +5155,7 @@ PrefabInstance:
     - target: {fileID: 885174776305426144, guid: 71cacef91e7957d488f19d862c52040f,
         type: 3}
       propertyPath: m_text
-      value: Restart
+      value: MAIN MENU
       objectReference: {fileID: 0}
     - target: {fileID: 885174776305426144, guid: 71cacef91e7957d488f19d862c52040f,
         type: 3}
@@ -5248,7 +5248,7 @@ PrefabInstance:
     - target: {fileID: 4314651968588608419, guid: 71cacef91e7957d488f19d862c52040f,
         type: 3}
       propertyPath: m_text
-      value: Restart
+      value: MAIN MENU
       objectReference: {fileID: 0}
     - target: {fileID: 4314651968588608419, guid: 71cacef91e7957d488f19d862c52040f,
         type: 3}
@@ -5592,17 +5592,17 @@ PrefabInstance:
     - target: {fileID: 6020726910918489074, guid: 71cacef91e7957d488f19d862c52040f,
         type: 3}
       propertyPath: enabledInactive.buttonText
-      value: RESTART
+      value: MAIN MENU
       objectReference: {fileID: 0}
     - target: {fileID: 6020726910918489074, guid: 71cacef91e7957d488f19d862c52040f,
         type: 3}
       propertyPath: enabledHover.buttonText
-      value: RESTART
+      value: MAIN MENU
       objectReference: {fileID: 0}
     - target: {fileID: 6020726910918489074, guid: 71cacef91e7957d488f19d862c52040f,
         type: 3}
       propertyPath: enabledActive.buttonText
-      value: RESTART
+      value: MAIN MENU
       objectReference: {fileID: 0}
     - target: {fileID: 6020726910918489074, guid: 71cacef91e7957d488f19d862c52040f,
         type: 3}
