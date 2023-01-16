@@ -7333,6 +7333,11 @@ PrefabInstance:
       propertyPath: controller
       value: 
       objectReference: {fileID: 1142160763}
+    - target: {fileID: 3317347559222833273, guid: 2279b582e7d972a44b6f031293a1ef01,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: bd6d8502e0fc41944a9e7a7d981c8118, type: 3}
     - target: {fileID: 5564827695739852497, guid: 2279b582e7d972a44b6f031293a1ef01,
         type: 3}
       propertyPath: m_VideoClip
@@ -12577,6 +12582,11 @@ PrefabInstance:
       propertyPath: duration
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3317347559222833273, guid: 2279b582e7d972a44b6f031293a1ef01,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 34b63163d836170458554e4c20e4c63b, type: 3}
     - target: {fileID: 5564827695739852497, guid: 2279b582e7d972a44b6f031293a1ef01,
         type: 3}
       propertyPath: m_VideoClip
@@ -12586,7 +12596,7 @@ PrefabInstance:
     - target: {fileID: 5564827695739852497, guid: 2279b582e7d972a44b6f031293a1ef01,
         type: 3}
       propertyPath: m_DirectAudioMutes.Array.data[0]
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5564827695739852497, guid: 2279b582e7d972a44b6f031293a1ef01,
         type: 3}
@@ -15499,6 +15509,11 @@ PrefabInstance:
       propertyPath: controller
       value: 
       objectReference: {fileID: 1142160763}
+    - target: {fileID: 3317347559222833273, guid: 2279b582e7d972a44b6f031293a1ef01,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 59d1052019d5e27449bc42d07e415266, type: 3}
     - target: {fileID: 5564827695739852497, guid: 2279b582e7d972a44b6f031293a1ef01,
         type: 3}
       propertyPath: m_VideoClip
@@ -30663,6 +30678,11 @@ PrefabInstance:
       propertyPath: speed
       value: 0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 7815769183724198230, guid: d14df552c61c0c744b3ed626c5476515,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3ab0b1e4505c8034f94ae4f6c7889d4e, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d14df552c61c0c744b3ed626c5476515, type: 3}
 --- !u!33 &1351322090880758579

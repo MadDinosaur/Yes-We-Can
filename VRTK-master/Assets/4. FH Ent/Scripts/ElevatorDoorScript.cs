@@ -9,7 +9,7 @@ public class ElevatorDoorScript : MonoBehaviour
     public GameObject rightDoor;
     public float speed = 0.005f;
     public float distance = 0.01f;
-    bool open;
+    bool triggered;
     
     // Start is called before the first frame update
     void Start()
@@ -19,7 +19,7 @@ public class ElevatorDoorScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (open)
+        if (triggered)
         {
             if (Math.Abs(leftDoor.transform.localPosition.x - rightDoor.transform.localPosition.x) < distance)
             {
@@ -27,15 +27,14 @@ public class ElevatorDoorScript : MonoBehaviour
                 rightDoor.transform.localPosition += Vector3.left * speed;
             }
         }
-        else open = false;
-        
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag.Equals("Headset"))
+        if (other.gameObject.tag.Equals("Headset") && !triggered)
         {
-            open = true;
+            triggered = true;
+            GetComponent<AudioSource>().Play();
         }
     }
 }

@@ -27,5 +27,6 @@ public class Teleporter : MonoBehaviour
         offset.transform.position = targetPosition;
         //Quaternion targetRotation = Quaternion.Euler(offset.transform.rotation.x, target.transform.rotation.y, offset.transform.rotation.z);
         //target.transform.rotation = targetRotation;
+        GetComponent<AudioSource>().Play();
     }
 }
