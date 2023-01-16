@@ -19,6 +19,10 @@ public class SnapZone : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.Return))
+        {
+            grabbedObject.transform.localPosition = Vector3.zero;
+        }
     }
 
     private void OnTriggerStay(Collider other)
@@ -31,22 +35,33 @@ public class SnapZone : MonoBehaviour
         highlight.SetActive(false);
     }
 
-    public void EmitUngrabbedObject(GameObject gameObject)
+    public void EmitUngrabbedObject(GameObject goal)
     {
-        if (Vector3.Distance(gameObject.transform.position, transform.position) < threshold)
+        if (Vector3.Distance(goal.transform.position, transform.position) < threshold)
         {
-            grabbedObject = gameObject;
-            gameObject.transform.parent = transform;
-            gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-            gameObject.transform.localPosition = Vector3.zero;
+            Debug.Log(goal.name);
+            grabbedObject = goal;
+            goal.transform.parent = transform;
+            //goal.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+            goal.GetComponent<Rigidbody>().isKinematic = true;
+            goal.GetComponent<Rigidbody>().useGravity = false;
+
+            StartCoroutine(FixPosition());
         }
     }
 
-    public void EmitGrabbedObject(GameObject gameObject) {
-        if (gameObject.Equals(grabbedObject))
+    public IEnumerator FixPosition()
+    {
+        yield return new WaitForSeconds(0.5f);
+
+        grabbedObject.transform.localPosition = Vector3.zero;
+    }
+
+    public void EmitGrabbedObject(GameObject goal) {
+        if (goal.Equals(grabbedObject))
         {
-            gameObject.transform.parent = null;
-            gameObject.GetComponent<Rigidbody>().constraints = ~RigidbodyConstraints.FreezeAll;
+            goal.transform.parent = null;
+            goal.GetComponent<Rigidbody>().constraints = ~RigidbodyConstraints.FreezeAll;
         }
     }
 }
