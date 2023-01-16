@@ -1014,7 +1014,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a2e23a797a9b1a74396a8ae3669ef3ad, type: 3}
+  m_Sprite: {fileID: 21300000, guid: efd96f47f7c7d6e4b8f9db6fa61038d9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2181,7 +2181,7 @@ MonoBehaviour:
   pointer: {fileID: 4524418137443270623}
   instructionScreen: {fileID: 4925361732840960460}
   images:
-  - {fileID: 21300000, guid: a2e23a797a9b1a74396a8ae3669ef3ad, type: 3}
+  - {fileID: 21300000, guid: efd96f47f7c7d6e4b8f9db6fa61038d9, type: 3}
   - {fileID: 21300000, guid: 9b10c6e8628ff7b4498ccf1fe54d7170, type: 3}
   - {fileID: 21300000, guid: 6077458d291490b48b08ea5c6c992532, type: 3}
   - {fileID: 21300000, guid: f04bba71456e3a54995876985f60d283, type: 3}
