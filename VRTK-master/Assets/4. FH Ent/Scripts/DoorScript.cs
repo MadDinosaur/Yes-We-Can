@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DoorScript : MonoBehaviour
 {
@@ -22,6 +23,8 @@ public class DoorScript : MonoBehaviour
 
     Transform doorLeft;
     Transform doorRight;
+
+    public UnityEvent onOpened;
 
     void Start()
     {
@@ -71,6 +74,7 @@ public class DoorScript : MonoBehaviour
         switch (doorStatus)
         {
             case status.Opening:
+                onOpened.Invoke();
                 openDoor();
                 break;
                 /*case status.Open:

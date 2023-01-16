@@ -30,6 +30,6 @@ ExportedObj/
 *.apk
 *.unitypackage
 
-Kanedee.mp4
-Wessel.mp4
-Ysa.mp4
+#LFS files
+BigVideos/
+Assets/BigVideos/

@@ -1579,19 +1579,19 @@ PrefabInstance:
         type: 3}
       propertyPath: videoClips.Array.data[0]
       value: 
-      objectReference: {fileID: 32900000, guid: 9daa23e52c2c12d4b94e53f9a7290fad,
+      objectReference: {fileID: 32900000, guid: 6d1419ac2cbfc1246ae7e5be9537304e,
         type: 3}
     - target: {fileID: 4225821302562823625, guid: fcc50a6038acca74cb5622fb36d1e9dd,
         type: 3}
       propertyPath: videoClips.Array.data[1]
       value: 
-      objectReference: {fileID: 32900000, guid: 267a1987c1b130e4caacab688deea8b9,
+      objectReference: {fileID: 32900000, guid: be77fbd98bbdb95449622263bafc6646,
         type: 3}
     - target: {fileID: 4225821302562823625, guid: fcc50a6038acca74cb5622fb36d1e9dd,
         type: 3}
       propertyPath: videoClips.Array.data[2]
       value: 
-      objectReference: {fileID: 32900000, guid: 9a772c8a3f16c7e4a8b6b47f8e29d7a6,
+      objectReference: {fileID: 32900000, guid: b26816d290f0dab4a9d92b18a9d2e3a3,
         type: 3}
     - target: {fileID: 4524418137443270623, guid: fcc50a6038acca74cb5622fb36d1e9dd,
         type: 3}
