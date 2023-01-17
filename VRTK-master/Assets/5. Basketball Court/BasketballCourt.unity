@@ -20015,7 +20015,7 @@ PrefabInstance:
     - target: {fileID: 4163037935098094082, guid: fcc50a6038acca74cb5622fb36d1e9dd,
         type: 3}
       propertyPath: build
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4344062202217795454, guid: fcc50a6038acca74cb5622fb36d1e9dd,
         type: 3}
@@ -31551,6 +31551,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Ignore Collision Fade
+      objectReference: {fileID: 0}
+    - target: {fileID: 7253397536261774988, guid: 0f122c017d53aa542a9a23ce4f9ba27e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7253397536263700556, guid: 0f122c017d53aa542a9a23ce4f9ba27e,
         type: 3}

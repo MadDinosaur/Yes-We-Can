@@ -5,11 +5,14 @@ using UnityEngine.UI;
 
 public class MenuController : MonoBehaviour
 {
+    public GameObject exitPrompt;
+
     public GameObject miniMenu;
     public GameObject pointer;
     
     public GameObject instructionScreen;
     public List<Sprite> images;
+
 
     bool pointerAlwaysOn;
     bool gameStartTrigger = true;
@@ -30,7 +33,7 @@ public class MenuController : MonoBehaviour
 
     public void TriggerMiniMenu()
     {
-        if (!instructionScreen.activeSelf)
+        if (!instructionScreen.activeSelf && !exitPrompt.activeSelf)
         {
             miniMenu.SetActive(!miniMenu.activeSelf);
             if (!pointerAlwaysOn) pointer.SetActive(!pointer.activeSelf);
@@ -39,7 +42,7 @@ public class MenuController : MonoBehaviour
 
     public void TriggerInstructionScreen()
     {
-        if (!miniMenu.activeSelf)
+        if (!miniMenu.activeSelf && !exitPrompt.activeSelf)
         {
             instructionScreen.SetActive(!instructionScreen.activeSelf);
             if (!gameStartTrigger) gameStartTrigger = true;
@@ -59,5 +62,6 @@ public class MenuController : MonoBehaviour
         if (index == images.Count) { TriggerInstructionScreen(); index = 0; }
         
         instructionScreen.GetComponentInChildren<Image>().sprite = images[index];
+        instructionScreen.GetComponent<AudioSource>().Play();
     }
 }

@@ -23,8 +23,9 @@ public class Teleporter : MonoBehaviour
     public void Teleport()
     {
         Vector3 targetPosition = new Vector3(targetCoords.transform.position.x, target.transform.position.y, targetCoords.transform.position.z);
-        target.transform.position = targetPosition;
-        offset.transform.position = targetPosition;
+        Vector3 offsetPosition = new Vector3(target.transform.position.x - offset.transform.position.x, 0, target.transform.position.z - offset.transform.position.z);
+        target.transform.position = targetPosition + offsetPosition;
+        //offset.transform.position = targetPosition;
         //Quaternion targetRotation = Quaternion.Euler(offset.transform.rotation.x, target.transform.rotation.y, offset.transform.rotation.z);
         //target.transform.rotation = targetRotation;
         GetComponent<AudioSource>().Play();

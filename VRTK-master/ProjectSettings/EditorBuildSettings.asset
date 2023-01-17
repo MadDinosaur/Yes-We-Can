@@ -5,19 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/1. Disclaimer/Disclaimer.unity
     guid: 6ba2cc245f3ce8047a971e3db54d5d28
   - enabled: 1
     path: Assets/2. Menu/MenuClass.unity
     guid: 4ce98f4e52094354fa9b7ba3c76cfb6f
-  - enabled: 0
+  - enabled: 1
     path: Assets/3. Interview Room/MovieTheatre.unity
     guid: 5096b9e84c80ce045bbe0513b548ad7a
-  - enabled: 0
+  - enabled: 1
     path: Assets/4. FH Ent/FHEntr.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 0
+  - enabled: 1
     path: Assets/5. Basketball Court/BasketballCourt.unity
     guid: 5ce856173715a394aa3547309bb36416
   - enabled: 0
