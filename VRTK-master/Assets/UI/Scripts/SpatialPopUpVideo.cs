@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SpatialPopUpVideo : MonoBehaviour
 {
-
+    public UnityEvent onFinished;
     public GameObject uiObject;
 
     // Start is called before the first frame update
@@ -32,6 +33,7 @@ public class SpatialPopUpVideo : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(seconds);
 
+        onFinished.Invoke();
         Destroy(uiObject);
         Destroy(this.gameObject);
     }

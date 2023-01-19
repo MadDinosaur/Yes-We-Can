@@ -160,7 +160,9 @@ public class SceneChanger : MonoBehaviour
 
     public void GoToBasketballCourt()
     {
-        LoadScene("BasketballCourt");
+        FadeOut();
+        SceneManager.LoadScene(4);
+        //LoadScene("BasketballCourt");
     }
 
     public void GoToMusicRoom()
