@@ -19,20 +19,18 @@ public class SnapZone : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Return))
-        {
-            grabbedObject.transform.localPosition = Vector3.zero;
-        }
     }
 
     private void OnTriggerStay(Collider other)
     {
-        highlight.SetActive(true);
+        if (other.gameObject.tag.Equals("Basketball"))
+            highlight.SetActive(true);
     }
 
     private void OnTriggerExit(Collider other)
     {
-        highlight.SetActive(false);
+        if (other.gameObject.tag.Equals("Basketball"))
+            highlight.SetActive(false);
     }
 
     public void EmitUngrabbedObject(GameObject goal)
@@ -42,9 +40,9 @@ public class SnapZone : MonoBehaviour
             Debug.Log(goal.name);
             grabbedObject = goal;
             goal.transform.parent = transform;
-            //goal.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-            goal.GetComponent<Rigidbody>().isKinematic = true;
-            goal.GetComponent<Rigidbody>().useGravity = false;
+            goal.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+            /*goal.GetComponent<Rigidbody>().isKinematic = true;
+            goal.GetComponent<Rigidbody>().useGravity = false;*/
 
             StartCoroutine(FixPosition());
         }
@@ -58,10 +56,12 @@ public class SnapZone : MonoBehaviour
     }
 
     public void EmitGrabbedObject(GameObject goal) {
-        if (goal.Equals(grabbedObject))
+        if (grabbedObject.Equals(goal))
         {
-            goal.transform.parent = null;
-            goal.GetComponent<Rigidbody>().constraints = ~RigidbodyConstraints.FreezeAll;
+            grabbedObject.transform.parent = null;
+            goal.GetComponent<Rigidbody>().constraints = ~RigidbodyConstraints.FreezeAll; 
+            /*grabbedObject.GetComponent<Rigidbody>().isKinematic = false;
+            grabbedObject.GetComponent<Rigidbody>().useGravity = true;*/
         }
     }
 }

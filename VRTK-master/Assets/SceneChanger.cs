@@ -68,6 +68,8 @@ public class SceneChanger : MonoBehaviour
                     GameObject.Find("LUKAS").SetActive(false);
                     GameObject.Find("SARA").SetActive(false);
                     GameObject.Find("THERESA").SetActive(true);
+                    GameObject.Find("AxisMove").SetActive(true);
+                    GameObject.Find("Teleporter").SetActive(false);
                     break;
                 case (GameMode.Dyslexia):
                     GameObject.Find("LUKAS").SetActive(false);
