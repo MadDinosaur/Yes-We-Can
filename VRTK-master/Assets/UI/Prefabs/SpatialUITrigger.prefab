@@ -109,6 +109,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 796c8479538301a42bee7010f635f494, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onFinished:
+    m_PersistentCalls:
+      m_Calls: []
   uiObject: {fileID: 231006857875949994}
 --- !u!33 &931071358207897712
 MeshFilter:
