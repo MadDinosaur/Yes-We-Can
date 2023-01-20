@@ -20,10 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/5. Basketball Court/BasketballCourt.unity
     guid: 5ce856173715a394aa3547309bb36416
-  - enabled: 0
+  - enabled: 1
     path: Assets/6. MusicRoom/AudioRoom.unity
     guid: ffb986f07d2db5d47bae48189b449b0f
-  - enabled: 0
+  - enabled: 1
     path: Assets/7. Classroom/Classroom.unity
     guid: e9cf481bef08d064c974fd1c3829b9b5
   - enabled: 0

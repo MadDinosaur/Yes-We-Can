@@ -20,6 +20,8 @@ public class SceneChanger : MonoBehaviour
 
     [SerializeField]
     public VideoClip[] videoClips = new VideoClip[3];
+    [SerializeField]
+    public GameObject[] characterObjects = new GameObject[3];
     enum GameMode
     {
         Wheelchair,
@@ -60,23 +62,19 @@ public class SceneChanger : MonoBehaviour
             switch (gameMode)
             {
                 case (GameMode.Wheelchair):
-                    GameObject.Find("LUKAS").SetActive(true);
-                    GameObject.Find("SARA").SetActive(false);
-                    GameObject.Find("THERESA").SetActive(false);
+                    characterObjects[0].SetActive(true);
+                    characterObjects[1].SetActive(false);
+                    characterObjects[2].SetActive(false);
                     break;
                 case (GameMode.Blindess):
-                    GameObject.Find("LUKAS").SetActive(false);
-                    GameObject.Find("SARA").SetActive(false);
-                    GameObject.Find("THERESA").SetActive(true);
-                    GameObject.Find("AxisMove").SetActive(true);
-                    GameObject.Find("Teleporter").SetActive(false);
+                    characterObjects[0].SetActive(false);
+                    characterObjects[1].SetActive(true);
+                    characterObjects[2].SetActive(false);
                     break;
                 case (GameMode.Dyslexia):
-                    GameObject.Find("LUKAS").SetActive(false);
-                    GameObject.Find("SARA").SetActive(true);
-                    GameObject.Find("THERESA").SetActive(false);
-                    break;
-                default:
+                    characterObjects[0].SetActive(false);
+                    characterObjects[1].SetActive(false);
+                    characterObjects[2].SetActive(true);
                     break;
             }
             enableObjectsOnStart = false;
@@ -86,6 +84,7 @@ public class SceneChanger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(gameMode);
 
     }
 
@@ -163,8 +162,7 @@ public class SceneChanger : MonoBehaviour
     public void GoToBasketballCourt()
     {
         FadeOut();
-        SceneManager.LoadScene(4);
-        //LoadScene("BasketballCourt");
+        LoadScene("BasketballCourt");
     }
 
     public void GoToMusicRoom()

@@ -33,7 +33,6 @@ public class DoorScript : MonoBehaviour
 
         foreach (Transform child in children)
         {
-            Debug.Log(child.name);
             if (child.name == "Door.002")
             {
                 doorLeft = child;
@@ -70,7 +69,6 @@ public class DoorScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(doorStatus);
         switch (doorStatus)
         {
             case status.Opening:
@@ -88,14 +86,12 @@ public class DoorScript : MonoBehaviour
 
     public void openDoors()
     {
-        Debug.Log("here");
         doorStatus = status.Opening;
     }
 
     void openDoor()
     {
         Vector3 newRotation = doorRight.transform.eulerAngles;
-        Debug.Log(newRotation);
         if (newRotation.y <= openDoorRightPosition || newRotation.y > 360 - speed)
         {
             newRotation.y += speed;
