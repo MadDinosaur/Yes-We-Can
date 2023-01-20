@@ -1014,7 +1014,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: efd96f47f7c7d6e4b8f9db6fa61038d9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bfa3b33119d1be843982da18cfcf256f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1754,6 +1754,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  characterObjects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &7271677408641058681
 GameObject:
   m_ObjectHideFlags: 0
@@ -2279,11 +2283,11 @@ MonoBehaviour:
   pointer: {fileID: 4524418137443270623}
   instructionScreen: {fileID: 4925361732840960460}
   images:
-  - {fileID: 21300000, guid: efd96f47f7c7d6e4b8f9db6fa61038d9, type: 3}
-  - {fileID: 21300000, guid: 9b10c6e8628ff7b4498ccf1fe54d7170, type: 3}
-  - {fileID: 21300000, guid: 6077458d291490b48b08ea5c6c992532, type: 3}
-  - {fileID: 21300000, guid: f04bba71456e3a54995876985f60d283, type: 3}
-  - {fileID: 21300000, guid: e6020ebff264ce449ab637a751d7ba4c, type: 3}
+  - {fileID: 21300000, guid: bfa3b33119d1be843982da18cfcf256f, type: 3}
+  - {fileID: 21300000, guid: da24b640fab50a24faf29e6d8f47345f, type: 3}
+  - {fileID: 21300000, guid: 325e58566231eb1458147ba0ad54d181, type: 3}
+  - {fileID: 21300000, guid: 8dae8fecae2d035488485194a636db8f, type: 3}
+  - {fileID: 21300000, guid: b45594bbbcd0da441ba79045cdb964dd, type: 3}
 --- !u!1001 &962234746552998
 PrefabInstance:
   m_ObjectHideFlags: 0
