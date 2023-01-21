@@ -5,19 +5,19 @@ using UnityEngine;
 
 public class SongController : MonoBehaviour
 {
-    public List<string> notesequence = new List<string>{ "C5", "B4", "A4", "G4", "F4", "G4", "A4", "C5", "B4", "A4", "C5", "F4", "E4" };
+    public List<string> notesequence = new List<string> { "C5", "B4", "A4", "G4", "F4", "G4", "A4", "C5", "B4", "A4", "C5", "F4", "E4" };
     List<string> currentsequence = new List<string>();
-    
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void EmitNote(string note)
@@ -29,8 +29,7 @@ public class SongController : MonoBehaviour
 
             //Cut original note sequence to appropriate size
             List<string> truncatednotesequence = notesequence.GetRange(0, currentsequence.Count);
-            Debug.Log("current: " + currentsequence);
-            Debug.Log("correct: " + truncatednotesequence);
+
             //Compare sequences
             bool correctnote = currentsequence.SequenceEqual(truncatednotesequence);
             if (!correctnote)
@@ -39,7 +38,8 @@ public class SongController : MonoBehaviour
 
                 //Reset sequence
                 currentsequence = new List<string>();
-            } else if (currentsequence.Count == notesequence.Count)
+            }
+            else if (currentsequence.Count == notesequence.Count)
             {
                 //Play correct sound
                 GetComponent<AudioSource>().Play();
@@ -55,6 +55,6 @@ public class SongController : MonoBehaviour
         if (notesequence.Count == currentsequence.Count) return false;
 
         string correctnote = notesequence[currentsequence.Count];
-        return correctnote.Equals(note);
+        return correctnote == note;
     }
 }

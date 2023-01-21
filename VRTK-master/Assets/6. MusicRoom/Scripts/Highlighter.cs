@@ -11,7 +11,7 @@ public class Highlighter : MonoBehaviour
 
     SongController controller;
     Material standardMaterial;
-    
+
 
     // Start is called before the first frame update
     void Start()
@@ -23,14 +23,14 @@ public class Highlighter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
 
 
     private void OnTriggerEnter(Collider other)
     {
-         if (controller.CheckIfHighlighted(key)) meshRenderer.material = highlightMaterial;
+        if (controller.CheckIfHighlighted(key)) meshRenderer.material = highlightMaterial;
     }
 
     public void Unhighlight()

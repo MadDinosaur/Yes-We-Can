@@ -5,7 +5,7 @@ using UnityEngine;
 public class DrumSound : MonoBehaviour
 {
     public Highlighter highlighter;
-    
+
     // Start is called before the first frame update
     void Start()
     {
