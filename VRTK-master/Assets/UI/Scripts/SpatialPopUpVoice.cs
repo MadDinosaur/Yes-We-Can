@@ -22,7 +22,7 @@ public class SpatialPopUpVoice : MonoBehaviour
             //Activate UI overlay
             uiObject.SetActive(true);
             //Determine duration of voice line and play
-            AudioSource voiceLine = GetComponent<AudioSource>();
+            AudioSource voiceLine = GetComponentInChildren<AudioSource>();
             float duration = voiceLine.clip.length;
             voiceLine.Play();
             //Keep UI active until voice line is done

@@ -29,7 +29,8 @@ public class SongController : MonoBehaviour
 
             //Cut original note sequence to appropriate size
             List<string> truncatednotesequence = notesequence.GetRange(0, currentsequence.Count);
-
+            Debug.Log("current: " + currentsequence);
+            Debug.Log("correct: " + truncatednotesequence);
             //Compare sequences
             bool correctnote = currentsequence.SequenceEqual(truncatednotesequence);
             if (!correctnote)
@@ -54,6 +55,6 @@ public class SongController : MonoBehaviour
         if (notesequence.Count == currentsequence.Count) return false;
 
         string correctnote = notesequence[currentsequence.Count];
-        return correctnote == note;
+        return correctnote.Equals(note);
     }
 }

@@ -492,7 +492,7 @@ GameObject:
   - component: {fileID: 3310507513950090804}
   m_Layer: 0
   m_Name: Highlighter
-  m_TagString: Untagged
+  m_TagString: Ignore Collision Fade
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -522,8 +522,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.28711072, y: 1, z: 0.43437496}
-  m_Center: {x: 0.06792537, y: -0.00000003220725, z: -0.28281263}
+  m_Size: {x: 2.2014925, y: 1, z: 0.434375}
+  m_Center: {x: 0.0030324336, y: -0.000000059604645, z: -0.28281263}
 --- !u!114 &3310507513950090804
 MonoBehaviour:
   m_ObjectHideFlags: 0

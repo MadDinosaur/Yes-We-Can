@@ -7,7 +7,7 @@ using System;
 
 public class ScorePoint : MonoBehaviour
 {
-    int points;
+    static int points;
     float timer;
     public ParticleSystem confetti;
     public TMP_Text textBox;
@@ -15,6 +15,7 @@ public class ScorePoint : MonoBehaviour
     public Animator[] peopleAnimators = new Animator[9];
     public AnimatorControllerParameter animator;
     public ScoreEvent onScored;
+    public UnityEvent onGoalReached;
     //System.Random rnd = new System.Random();
 
     [Serializable]
@@ -50,6 +51,7 @@ public class ScorePoint : MonoBehaviour
                 peopleAnimator.SetInteger("AnimationNum", UnityEngine.Random.Range(1, 4));
             }
             onScored.Invoke();
+            if (points == 5) onGoalReached.Invoke();
         }
     }
 }

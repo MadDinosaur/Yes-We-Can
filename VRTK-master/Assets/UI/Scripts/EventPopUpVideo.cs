@@ -1,10 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EventPopUpVideo : MonoBehaviour
 {
     public GameObject uiObject;
+    public UnityEvent onFinished;
+
+    public float delay = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -16,12 +20,15 @@ public class EventPopUpVideo : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(seconds);
 
+        onFinished.Invoke();
         Destroy(uiObject);
         Destroy(this.gameObject);
     }
 
-    public void TriggerVoiceLine()
+    IEnumerator WaitForDelay(float seconds)
     {
+        yield return new WaitForSecondsRealtime(seconds);
+
         //Activate UI overlay
         uiObject.SetActive(true);
         //Determine duration of voice line and play
@@ -29,6 +36,12 @@ public class EventPopUpVideo : MonoBehaviour
         double clipLength = voiceLine.clip.length;
         //Keep UI active until voice line is done
         StartCoroutine(WaitForVoiceLine((float)clipLength));
+    }
+
+    public void TriggerVoiceLine()
+    {
+        //Wait for delay timer
+        StartCoroutine(WaitForDelay(delay));
     }
 }
 
