@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Video;
@@ -9,6 +10,8 @@ using TMPro;
 
 public class SceneChanger : MonoBehaviour
 {
+    public UnityEvent onSceneLoad;
+
     public TextMeshPro debug;
 
     public bool fadeOnStart = true;
@@ -37,9 +40,14 @@ public class SceneChanger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Invoke teleport event
+        onSceneLoad.Invoke();
+
+        //Fade effect
         rend = screenFader.GetComponent<Renderer>();
         if (fadeOnStart) FadeIn();
 
+        //Choose video playing in movie theatre
         if (playVideoOnStart)
         {
             //Get video player object and set the correct video for each character
@@ -61,6 +69,7 @@ public class SceneChanger : MonoBehaviour
             playVideoOnStart = false;
         }
 
+        //Choose which character to active in entrance
         debug.SetText(debug.text + "\n enableObjectsOnStart: " + enableObjectsOnStart);
         if (enableObjectsOnStart)
         {

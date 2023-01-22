@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System.Globalization;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -29,5 +30,19 @@ public class Teleporter : MonoBehaviour
         //Quaternion targetRotation = Quaternion.Euler(offset.transform.rotation.x, target.transform.rotation.y, offset.transform.rotation.z);
         //target.transform.rotation = targetRotation;
         GetComponent<AudioSource>().Play();
+    }
+
+    public void Teleport(string position)
+    {
+        string[] coords = position.Split(',');
+        float x = float.Parse(coords[0], CultureInfo.InvariantCulture.NumberFormat);
+        float z = float.Parse(coords[2], CultureInfo.InvariantCulture.NumberFormat);
+        
+        Vector3 targetPosition = new Vector3(x, target.transform.position.y, z);
+        Vector3 offsetPosition = new Vector3(target.transform.position.x - offset.transform.position.x, 0, target.transform.position.z - offset.transform.position.z);
+        target.transform.position = targetPosition + offsetPosition;
+        //offset.transform.position = targetPosition;
+        //Quaternion targetRotation = Quaternion.Euler(offset.transform.rotation.x, target.transform.rotation.y, offset.transform.rotation.z);
+        //target.transform.rotation = targetRotation;
     }
 }
