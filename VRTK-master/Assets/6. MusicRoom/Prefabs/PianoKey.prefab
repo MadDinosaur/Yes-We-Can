@@ -537,7 +537,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meshRenderer: {fileID: 8017058496977568192}
-  highlightMaterial: {fileID: 2100000, guid: cac370e18424aeb40b14e48b6086e96c, type: 2}
+  highlightMaterial: {fileID: -1580411035032496780, guid: a47ac2e4de1a5aa4cb3439609a45787e,
+    type: 3}
   key: 0
 --- !u!1001 &5072794341990003389
 PrefabInstance:
