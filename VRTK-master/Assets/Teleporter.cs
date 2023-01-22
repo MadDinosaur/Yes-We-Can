@@ -32,15 +32,11 @@ public class Teleporter : MonoBehaviour
         GetComponent<AudioSource>().Play();
     }
 
-    public void Teleport(string position)
+    public void TeleportToOrigin()
     {
-        string[] coords = position.Split(',');
-        float x = float.Parse(coords[0], CultureInfo.InvariantCulture.NumberFormat);
-        float z = float.Parse(coords[2], CultureInfo.InvariantCulture.NumberFormat);
-        
-        Vector3 targetPosition = new Vector3(x, target.transform.position.y, z);
+        Vector3 targetPosition = new Vector3(0, target.transform.position.y, 0);
         Vector3 offsetPosition = new Vector3(target.transform.position.x - offset.transform.position.x, 0, target.transform.position.z - offset.transform.position.z);
-        target.transform.position = targetPosition + offsetPosition;
+        target.transform.localPosition = targetPosition + offsetPosition;
         //offset.transform.position = targetPosition;
         //Quaternion targetRotation = Quaternion.Euler(offset.transform.rotation.x, target.transform.rotation.y, offset.transform.rotation.z);
         //target.transform.rotation = targetRotation;

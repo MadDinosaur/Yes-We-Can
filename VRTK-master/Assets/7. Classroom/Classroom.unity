@@ -16335,8 +16335,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: " Class Work \n\n Find all the 16 puzzle pieces\n Put the puzzle together
-    on the corkboard\n Have fun drawing on the board"
+  m_text: " Class Work \n\n Put the puzzle together on the corkboard\n Have fun drawing
+    on the board"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0fc3d58c61ef2ab42b16269d8bd18132, type: 2}
   m_sharedMaterial: {fileID: -4317333128940782239, guid: 0fc3d58c61ef2ab42b16269d8bd18132,
@@ -22400,6 +22400,18 @@ PrefabInstance:
 --- !u!4 &543411453 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8953663403482269510, guid: fcc50a6038acca74cb5622fb36d1e9dd,
+    type: 3}
+  m_PrefabInstance: {fileID: 543411452}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &543411454 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4524418137443270623, guid: fcc50a6038acca74cb5622fb36d1e9dd,
+    type: 3}
+  m_PrefabInstance: {fileID: 543411452}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &543411455 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 381425581753758043, guid: fcc50a6038acca74cb5622fb36d1e9dd,
     type: 3}
   m_PrefabInstance: {fileID: 543411452}
   m_PrefabAsset: {fileID: 0}
@@ -41863,13 +41875,58 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1437597854603411009, guid: 0f122c017d53aa542a9a23ce4f9ba27e,
         type: 3}
-      propertyPath: Touched.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
+      propertyPath: Touched.m_PersistentCalls.m_Calls.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1437597854603411009, guid: 0f122c017d53aa542a9a23ce4f9ba27e,
         type: 3}
+      propertyPath: Touched.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 543411455}
+    - target: {fileID: 1437597854603411009, guid: 0f122c017d53aa542a9a23ce4f9ba27e,
+        type: 3}
       propertyPath: Touched.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GoToMainMenu
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 1437597854603411009, guid: 0f122c017d53aa542a9a23ce4f9ba27e,
+        type: 3}
+      propertyPath: Touched.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1437597854603411009, guid: 0f122c017d53aa542a9a23ce4f9ba27e,
+        type: 3}
+      propertyPath: Touched.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1437597854603411009, guid: 0f122c017d53aa542a9a23ce4f9ba27e,
+        type: 3}
+      propertyPath: Touched.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1437597854603411009, guid: 0f122c017d53aa542a9a23ce4f9ba27e,
+        type: 3}
+      propertyPath: Touched.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1437597854603411009, guid: 0f122c017d53aa542a9a23ce4f9ba27e,
+        type: 3}
+      propertyPath: Touched.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1437597854603411009, guid: 0f122c017d53aa542a9a23ce4f9ba27e,
+        type: 3}
+      propertyPath: Touched.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 543411454}
+    - target: {fileID: 1437597854603411009, guid: 0f122c017d53aa542a9a23ce4f9ba27e,
+        type: 3}
+      propertyPath: Touched.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 1437597854603411009, guid: 0f122c017d53aa542a9a23ce4f9ba27e,
+        type: 3}
+      propertyPath: Touched.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5788404594761134998, guid: 0f122c017d53aa542a9a23ce4f9ba27e,
         type: 3}

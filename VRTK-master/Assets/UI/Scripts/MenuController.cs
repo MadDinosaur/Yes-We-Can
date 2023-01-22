@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class MenuController : MonoBehaviour
@@ -12,6 +13,8 @@ public class MenuController : MonoBehaviour
     
     public GameObject instructionScreen;
     public List<Sprite> images;
+
+    public UnityEvent onInstructionsRead;
 
 
     bool pointerAlwaysOn;
@@ -67,7 +70,7 @@ public class MenuController : MonoBehaviour
         if (!instructionScreen.activeSelf) return;
         
         index += 1;
-        if (index == images.Count) { TriggerInstructionScreen(); index = 0; }
+        if (index == images.Count) { TriggerInstructionScreen(); onInstructionsRead.Invoke(); }
         
         instructionScreen.GetComponentInChildren<Image>().sprite = images[index];
         instructionScreen.GetComponent<AudioSource>().Play();

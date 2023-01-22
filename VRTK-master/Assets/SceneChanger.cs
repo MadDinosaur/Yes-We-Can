@@ -158,8 +158,21 @@ public class SceneChanger : MonoBehaviour
         else
         {
             enableObjectsOnStart = true;
-            LoadScene(3);
+            if (gameMode.Equals(GameMode.Blindess))
+                GoToBlindFHEntrance();
+            else
+                GoToFHEntrance();
         }
+    }
+
+    public void GoToFHEntrance()
+    {
+        LoadScene(3);
+    }
+
+    public void GoToBlindFHEntrance()
+    {
+        LoadScene(7);
     }
 
     public void LeaveFHEntrance()
@@ -191,6 +204,11 @@ public class SceneChanger : MonoBehaviour
     }
 
     public void GoToMusicRoom()
+    {
+        LoadScene(8);
+    }
+
+    public void GoToMusicRoomGame()
     {
         LoadScene(5);
     }

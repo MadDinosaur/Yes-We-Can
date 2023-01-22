@@ -1516,29 +1516,6 @@ PrefabInstance:
       propertyPath: build
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4225821302562823625, guid: fcc50a6038acca74cb5622fb36d1e9dd,
-        type: 3}
-      propertyPath: videoClips.Array.data[0]
-      value: 
-      objectReference: {fileID: 32900000, guid: 267a1987c1b130e4caacab688deea8b9,
-        type: 3}
-    - target: {fileID: 4225821302562823625, guid: fcc50a6038acca74cb5622fb36d1e9dd,
-        type: 3}
-      propertyPath: videoClips.Array.data[1]
-      value: 
-      objectReference: {fileID: 32900000, guid: 267a1987c1b130e4caacab688deea8b9,
-        type: 3}
-    - target: {fileID: 4225821302562823625, guid: fcc50a6038acca74cb5622fb36d1e9dd,
-        type: 3}
-      propertyPath: videoClips.Array.data[2]
-      value: 
-      objectReference: {fileID: 32900000, guid: 267a1987c1b130e4caacab688deea8b9,
-        type: 3}
-    - target: {fileID: 4225821302562823625, guid: fcc50a6038acca74cb5622fb36d1e9dd,
-        type: 3}
-      propertyPath: onSceneLoad.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: 0.111,2.62,0.365
-      objectReference: {fileID: 0}
     - target: {fileID: 4524418137443270623, guid: fcc50a6038acca74cb5622fb36d1e9dd,
         type: 3}
       propertyPath: m_IsActive

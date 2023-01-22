@@ -63800,6 +63800,9 @@ MonoBehaviour:
   - {fileID: 1219169889}
   onScored:
     m_PersistentCalls:
+      m_Calls: []
+  onGoalReached:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4447324205865122246}
         m_MethodName: TriggerVoiceLine
@@ -63812,9 +63815,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  onGoalReached:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!65 &8017099068640735933
 BoxCollider:
   m_ObjectHideFlags: 0
