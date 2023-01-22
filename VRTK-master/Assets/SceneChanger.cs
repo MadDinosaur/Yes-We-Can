@@ -4,9 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Video;
+using System;
+using TMPro;
 
 public class SceneChanger : MonoBehaviour
 {
+    public TextMeshPro debug;
+
     public bool fadeOnStart = true;
     public float transitionDuration = 2;
     public Color transitionColor;
@@ -17,6 +21,7 @@ public class SceneChanger : MonoBehaviour
     static bool isInterviewOnly;
     static bool playVideoOnStart;
     static bool enableObjectsOnStart;
+    bool movieLoadTriggered;
 
     [SerializeField]
     public VideoClip[] videoClips = new VideoClip[3];
@@ -56,8 +61,10 @@ public class SceneChanger : MonoBehaviour
             playVideoOnStart = false;
         }
 
+        debug.SetText(debug.text + "\n enableObjectsOnStart: " + enableObjectsOnStart);
         if (enableObjectsOnStart)
         {
+            debug.SetText(debug.text + "\n" + gameMode + characterObjects[0] + characterObjects[1] + characterObjects[2]);
             //Searches for character section and enables it
             switch (gameMode)
             {
@@ -76,6 +83,8 @@ public class SceneChanger : MonoBehaviour
                     characterObjects[1].SetActive(false);
                     characterObjects[2].SetActive(true);
                     break;
+                default:
+                    break;
             }
             enableObjectsOnStart = false;
         }
@@ -90,9 +99,11 @@ public class SceneChanger : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        Debug.Log("triger with " + other.gameObject.name);
+        if (movieLoadTriggered) return;
+
         if (other.gameObject.tag.Equals("Headset"))
         {
+            movieLoadTriggered = true;
             LeaveMovieTheater();
         }
     }
@@ -101,12 +112,11 @@ public class SceneChanger : MonoBehaviour
     {
         Debug.Log("Going back to main menu...");
         resetMenuOptions();
-        LoadScene("MenuClass");
+        LoadScene(1);
     }
 
     public void SetLukasGameMode()
     {
-        Debug.Log("lukas");
         gameMode = GameMode.Wheelchair;
     }
 
@@ -129,7 +139,7 @@ public class SceneChanger : MonoBehaviour
     {
         Debug.Log("movie");
         playVideoOnStart = true;
-        LoadScene("MovieTheatre");
+        LoadScene(2);
     }
 
     public void LeaveMovieTheater()
@@ -139,40 +149,46 @@ public class SceneChanger : MonoBehaviour
         else
         {
             enableObjectsOnStart = true;
-            LoadScene("FHEntr");
+            LoadScene(3);
         }
     }
 
     public void LeaveFHEntrance()
     {
-        switch (gameMode)
+        try
         {
-            case (GameMode.Wheelchair):
-                GoToBasketballCourt();
-                break;
-            case (GameMode.Blindess):
-                GoToMusicRoom();
-                break;
-            case (GameMode.Dyslexia):
-                GoToPuzzleRoom();
-                break;
+            switch (gameMode)
+            {
+                case (GameMode.Wheelchair):
+                    GoToBasketballCourt();
+                    break;
+                case (GameMode.Blindess):
+                    GoToMusicRoom();
+                    break;
+                case (GameMode.Dyslexia):
+                    GoToPuzzleRoom();
+                    break;
+            }
+        } catch (Exception e)
+        {
+            debug.SetText(debug.text + "\n" + gameMode);
+            debug.SetText(debug.text + "\n" + e.StackTrace);
         }
     }
 
     public void GoToBasketballCourt()
     {
-        FadeOut();
-        LoadScene("BasketballCourt");
+        LoadScene(4);
     }
 
     public void GoToMusicRoom()
     {
-        LoadScene("AudioRoom");
+        LoadScene(5);
     }
 
     public void GoToPuzzleRoom()
     {
-        LoadScene("Classroom");
+        LoadScene(6);
     }
 
     void resetMenuOptions()
@@ -181,17 +197,18 @@ public class SceneChanger : MonoBehaviour
         gameMode = GameMode.None;
     }
 
-    void LoadScene(string name)
+    void LoadScene(int index)
     {
-        StartCoroutine(LoadSceneAsync(name));
+        try { StartCoroutine(LoadSceneAsync(index)); }
+        catch ( Exception e) { debug.SetText(debug.text + "\n" + e.StackTrace); }
     }
 
-    IEnumerator LoadSceneAsync(string name)
+    IEnumerator LoadSceneAsync(int index)
     {
         FadeOut();
         
         //Launch new scene
-        AsyncOperation operation = SceneManager.LoadSceneAsync(name);
+        AsyncOperation operation = SceneManager.LoadSceneAsync(index, LoadSceneMode.Single);
 
         //Wait for scene load and trasition animation
         operation.allowSceneActivation = false;

@@ -25,7 +25,7 @@ public class ExitManager : MonoBehaviour
 
     public void Trigger()
     {
-        voiceLine.GetComponent<EventPopUpVideo>().TriggerVoiceLine();
+            voiceLine.GetComponent<EventPopUpVideo>().TriggerVoiceLine();
             float duration = voiceLine.GetComponentInChildren<AudioSource>().clip.length;
             StartCoroutine(WaitForVoiceLine(duration));
     }

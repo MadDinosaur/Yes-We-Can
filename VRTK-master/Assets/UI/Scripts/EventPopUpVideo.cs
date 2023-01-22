@@ -40,6 +40,8 @@ public class EventPopUpVideo : MonoBehaviour
 
     public void TriggerVoiceLine()
     {
+        if (!gameObject.activeSelf) return;
+
         //Wait for delay timer
         StartCoroutine(WaitForDelay(delay));
     }

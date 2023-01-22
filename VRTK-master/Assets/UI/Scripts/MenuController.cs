@@ -33,6 +33,8 @@ public class MenuController : MonoBehaviour
 
     public void TriggerMiniMenu()
     {
+        if (!gameObject.activeSelf) return; 
+
         if (!instructionScreen.activeSelf && !exitPrompt.activeSelf)
         {
             miniMenu.SetActive(!miniMenu.activeSelf);
@@ -42,9 +44,13 @@ public class MenuController : MonoBehaviour
 
     public void TriggerInstructionScreen()
     {
+        if (!gameObject.activeSelf) return;
+
         if (!miniMenu.activeSelf && !exitPrompt.activeSelf)
         {
             instructionScreen.SetActive(!instructionScreen.activeSelf);
+            instructionScreen.GetComponentInChildren<Image>().sprite = images[0];
+            index = 0;
             if (!gameStartTrigger) gameStartTrigger = true;
         }
     }
@@ -56,6 +62,8 @@ public class MenuController : MonoBehaviour
 
     public void NavigateInstructions()
     {
+        if (!gameObject.activeSelf) return;
+
         if (!instructionScreen.activeSelf) return;
         
         index += 1;
@@ -63,5 +71,10 @@ public class MenuController : MonoBehaviour
         
         instructionScreen.GetComponentInChildren<Image>().sprite = images[index];
         instructionScreen.GetComponent<AudioSource>().Play();
+    }
+
+    private void OnEnable()
+    {
+        instructionScreen.GetComponentInChildren<Image>().sprite = images[0];
     }
 }
