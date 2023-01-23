@@ -25,6 +25,9 @@ public class SceneChanger : MonoBehaviour
     static bool playVideoOnStart;
     static bool enableObjectsOnStart;
     bool movieLoadTriggered;
+    bool basketballLoadTriggered;
+    bool musicRoomLoadTriggered;
+    bool classroomLoadTriggered;
 
     [SerializeField]
     public VideoClip[] videoClips = new VideoClip[3];
@@ -200,11 +203,17 @@ public class SceneChanger : MonoBehaviour
 
     public void GoToBasketballCourt()
     {
+        if (basketballLoadTriggered) return;
+
+        basketballLoadTriggered = true;
         LoadScene(4);
     }
 
     public void GoToMusicRoom()
     {
+        if (musicRoomLoadTriggered) return;
+
+        musicRoomLoadTriggered = true;
         LoadScene(8);
     }
 
@@ -215,6 +224,9 @@ public class SceneChanger : MonoBehaviour
 
     public void GoToPuzzleRoom()
     {
+        if (classroomLoadTriggered) return;
+
+        classroomLoadTriggered = true;
         LoadScene(6);
     }
 
@@ -222,6 +234,11 @@ public class SceneChanger : MonoBehaviour
     {
         isInterviewOnly = false;
         gameMode = GameMode.None;
+
+        movieLoadTriggered = false;
+        basketballLoadTriggered = false;
+        musicRoomLoadTriggered = false;
+        classroomLoadTriggered = false;
     }
 
     void LoadScene(int index)
