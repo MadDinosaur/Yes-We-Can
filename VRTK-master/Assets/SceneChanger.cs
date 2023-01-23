@@ -24,6 +24,7 @@ public class SceneChanger : MonoBehaviour
     static bool isInterviewOnly;
     static bool playVideoOnStart;
     static bool enableObjectsOnStart;
+    bool mainMenuTriggered;
     bool movieLoadTriggered;
     bool basketballLoadTriggered;
     bool musicRoomLoadTriggered;
@@ -122,7 +123,9 @@ public class SceneChanger : MonoBehaviour
 
     public void GoToMainMenu()
     {
-        Debug.Log("Going back to main menu...");
+        if (mainMenuTriggered) return;
+
+        mainMenuTriggered = true;
         resetMenuOptions();
         LoadScene(1);
     }
@@ -149,7 +152,7 @@ public class SceneChanger : MonoBehaviour
 
     public void GoToMovieTheater()
     {
-        Debug.Log("movie");
+        mainMenuTriggered = false;
         playVideoOnStart = true;
         LoadScene(2);
     }
@@ -161,21 +164,13 @@ public class SceneChanger : MonoBehaviour
         else
         {
             enableObjectsOnStart = true;
-            if (gameMode.Equals(GameMode.Blindess))
-                GoToBlindFHEntrance();
-            else
-                GoToFHEntrance();
+            GoToFHEntrance();
         }
     }
 
     public void GoToFHEntrance()
     {
         LoadScene(3);
-    }
-
-    public void GoToBlindFHEntrance()
-    {
-        LoadScene(7);
     }
 
     public void LeaveFHEntrance()
@@ -204,7 +199,8 @@ public class SceneChanger : MonoBehaviour
     public void GoToBasketballCourt()
     {
         if (basketballLoadTriggered) return;
-
+        
+        mainMenuTriggered = false;
         basketballLoadTriggered = true;
         LoadScene(4);
     }
@@ -213,12 +209,8 @@ public class SceneChanger : MonoBehaviour
     {
         if (musicRoomLoadTriggered) return;
 
+        mainMenuTriggered = false;
         musicRoomLoadTriggered = true;
-        LoadScene(8);
-    }
-
-    public void GoToMusicRoomGame()
-    {
         LoadScene(5);
     }
 
@@ -226,6 +218,7 @@ public class SceneChanger : MonoBehaviour
     {
         if (classroomLoadTriggered) return;
 
+        mainMenuTriggered = false;
         classroomLoadTriggered = true;
         LoadScene(6);
     }
