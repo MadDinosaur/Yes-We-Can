@@ -11074,7 +11074,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: bd6d8502e0fc41944a9e7a7d981c8118, type: 3}
+      objectReference: {fileID: 8300000, guid: 1172fbd27a9477d4499c8d451b794af4, type: 3}
     - target: {fileID: 5564827695739852497, guid: 2279b582e7d972a44b6f031293a1ef01,
         type: 3}
       propertyPath: m_VideoClip
@@ -18090,7 +18090,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 34b63163d836170458554e4c20e4c63b, type: 3}
+      objectReference: {fileID: 8300000, guid: 26e7a2f0aa951b740a854216dc667930, type: 3}
     - target: {fileID: 3317347559222833273, guid: 2279b582e7d972a44b6f031293a1ef01,
         type: 3}
       propertyPath: Priority
@@ -22714,7 +22714,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 59d1052019d5e27449bc42d07e415266, type: 3}
+      objectReference: {fileID: 8300000, guid: b382d4256b6378a4ca099ef501b4478e, type: 3}
     - target: {fileID: 5564827695739852497, guid: 2279b582e7d972a44b6f031293a1ef01,
         type: 3}
       propertyPath: m_VideoClip
@@ -41992,7 +41992,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 3ab0b1e4505c8034f94ae4f6c7889d4e, type: 3}
+      objectReference: {fileID: 8300000, guid: 9adbf4611b8fb944990b1dae934834b2, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d14df552c61c0c744b3ed626c5476515, type: 3}
 --- !u!33 &1351322090880758579
@@ -61741,7 +61741,7 @@ MonoBehaviour:
   - {fileID: 566730487}
   - {fileID: 772344689}
   - {fileID: 1219169889}
-  onScored:
+  onFirstScored:
     m_PersistentCalls:
       m_Calls: []
   onGoalReached:
@@ -63798,10 +63798,7 @@ MonoBehaviour:
   - {fileID: 566730487}
   - {fileID: 772344689}
   - {fileID: 1219169889}
-  onScored:
-    m_PersistentCalls:
-      m_Calls: []
-  onGoalReached:
+  onFirstScored:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4447324205865122246}
@@ -63815,6 +63812,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onGoalReached:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &8017099068640735933
 BoxCollider:
   m_ObjectHideFlags: 0

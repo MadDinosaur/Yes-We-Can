@@ -14,7 +14,7 @@ public class ScorePoint : MonoBehaviour
     public TMP_Text timeBox;
     public Animator[] peopleAnimators = new Animator[9];
     public AnimatorControllerParameter animator;
-    public ScoreEvent onScored;
+    public ScoreEvent onFirstScored;
     public UnityEvent onGoalReached;
     //System.Random rnd = new System.Random();
 
@@ -50,8 +50,8 @@ public class ScorePoint : MonoBehaviour
                 peopleAnimator.SetTrigger("Cheer");
                 peopleAnimator.SetInteger("AnimationNum", UnityEngine.Random.Range(1, 4));
             }
-            onScored.Invoke();
-            if (points == 5) onGoalReached.Invoke();
+            if (points == 1) onFirstScored.Invoke();
+            if (points == 3) onGoalReached.Invoke();
         }
     }
 }
