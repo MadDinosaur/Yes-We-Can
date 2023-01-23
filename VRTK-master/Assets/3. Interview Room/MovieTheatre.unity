@@ -1429,7 +1429,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 299944530, guid: fcc50a6038acca74cb5622fb36d1e9dd, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 710439928844493116, guid: fcc50a6038acca74cb5622fb36d1e9dd,
         type: 3}
@@ -1509,7 +1509,7 @@ PrefabInstance:
     - target: {fileID: 4163037935098094082, guid: fcc50a6038acca74cb5622fb36d1e9dd,
         type: 3}
       propertyPath: editorHeight
-      value: 2.705
+      value: -2.03
       objectReference: {fileID: 0}
     - target: {fileID: 4163037935098094082, guid: fcc50a6038acca74cb5622fb36d1e9dd,
         type: 3}
@@ -1520,19 +1520,19 @@ PrefabInstance:
         type: 3}
       propertyPath: videoClips.Array.data[0]
       value: 
-      objectReference: {fileID: 32900000, guid: 267a1987c1b130e4caacab688deea8b9,
+      objectReference: {fileID: 32900000, guid: 21d5ac6d298033e4aa0a83154a3598e3,
         type: 3}
     - target: {fileID: 4225821302562823625, guid: fcc50a6038acca74cb5622fb36d1e9dd,
         type: 3}
       propertyPath: videoClips.Array.data[1]
       value: 
-      objectReference: {fileID: 32900000, guid: 267a1987c1b130e4caacab688deea8b9,
+      objectReference: {fileID: 32900000, guid: 21d5ac6d298033e4aa0a83154a3598e3,
         type: 3}
     - target: {fileID: 4225821302562823625, guid: fcc50a6038acca74cb5622fb36d1e9dd,
         type: 3}
       propertyPath: videoClips.Array.data[2]
       value: 
-      objectReference: {fileID: 32900000, guid: 267a1987c1b130e4caacab688deea8b9,
+      objectReference: {fileID: 32900000, guid: 21d5ac6d298033e4aa0a83154a3598e3,
         type: 3}
     - target: {fileID: 4524418137443270623, guid: fcc50a6038acca74cb5622fb36d1e9dd,
         type: 3}
