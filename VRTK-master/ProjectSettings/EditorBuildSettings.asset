@@ -27,7 +27,7 @@ EditorBuildSettings:
     path: Assets/7. Classroom/Classroom.unity
     guid: e9cf481bef08d064c974fd1c3829b9b5
   - enabled: 0
-    path: Assets/~RandomExtras/Samples/Farm/Scenes/ExampleScene.unity
+    path: Assets/Others/Samples/Farm/Scenes/ExampleScene.unity
     guid: 33a770456cf624c41838a4ec1a1de55f
   - enabled: 0
     path: 

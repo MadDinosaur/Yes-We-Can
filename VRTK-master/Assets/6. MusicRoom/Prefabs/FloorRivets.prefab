@@ -305,11 +305,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8131577243122228357}
     m_Modifications:
+    - target: {fileID: 1768094186006014588, guid: 8055a15416172994f87eacfe8e9e374e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c4a894d9312b38748a927e934824ab85, type: 2}
+    - target: {fileID: 3353035591617450037, guid: 8055a15416172994f87eacfe8e9e374e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c4a894d9312b38748a927e934824ab85, type: 2}
+    - target: {fileID: 4707638898955995507, guid: 8055a15416172994f87eacfe8e9e374e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c4a894d9312b38748a927e934824ab85, type: 2}
     - target: {fileID: 5468531194098807638, guid: 8055a15416172994f87eacfe8e9e374e,
         type: 3}
       propertyPath: m_Name
       value: FloorRivetBase
       objectReference: {fileID: 0}
+    - target: {fileID: 6536307434862316634, guid: 8055a15416172994f87eacfe8e9e374e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c4a894d9312b38748a927e934824ab85, type: 2}
     - target: {fileID: 7311819429534287937, guid: 8055a15416172994f87eacfe8e9e374e,
         type: 3}
       propertyPath: m_LocalPosition.x
