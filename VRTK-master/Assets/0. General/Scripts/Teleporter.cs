@@ -31,14 +31,5 @@ public class Teleporter : MonoBehaviour
         //target.transform.rotation = targetRotation;
         GetComponent<AudioSource>().Play();
     }
-
-    public void TeleportToOrigin()
-    {
-        Vector3 targetPosition = new Vector3(0, target.transform.position.y, 0);
-        Vector3 offsetPosition = new Vector3(target.transform.position.x - offset.transform.position.x, 0, target.transform.position.z - offset.transform.position.z);
-        target.transform.localPosition = targetPosition + offsetPosition;
-        offset.transform.localPosition = targetPosition;
-        //Quaternion targetRotation = Quaternion.Euler(offset.transform.rotation.x, target.transform.rotation.y, offset.transform.rotation.z);
-        //target.transform.rotation = targetRotation;
-    }
+    
 }
