@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class DoorScript : MonoBehaviour
 {
-    public float speed = 0.5f;
+    public float speed = 50f;
     public float duration = 5;
     public bool openOnStart;
 
@@ -94,7 +94,7 @@ public class DoorScript : MonoBehaviour
         Vector3 newRotation = doorRight.transform.eulerAngles;
         if (newRotation.y <= openDoorRightPosition || newRotation.y > 360 - speed)
         {
-            newRotation.y += speed;
+            newRotation.y += speed * Time.deltaTime;
             doorRight.transform.eulerAngles = newRotation;
 
             newRotation.y = -newRotation.y;
@@ -117,7 +117,7 @@ public class DoorScript : MonoBehaviour
             Vector3 newRotation = doorRight.transform.eulerAngles;
             if (newRotation.y >= 0 && newRotation.y <= openDoorRightPosition + speed)
             {
-                newRotation.y -= speed;
+                newRotation.y -= speed * Time.deltaTime;
                 doorRight.transform.eulerAngles = newRotation;
 
                 newRotation.y = -newRotation.y;
