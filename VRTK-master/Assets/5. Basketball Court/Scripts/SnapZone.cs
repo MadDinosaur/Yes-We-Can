@@ -10,6 +10,9 @@ public class SnapZone : MonoBehaviour
     bool updateObjectPosition;
     public float threshold;
 
+    float tempTime;
+    bool triggerFixPos = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +22,7 @@ public class SnapZone : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (triggerFixPos && Time.deltaTime - tempTime > 0.5f) FixPosition();
     }
 
     private void OnTriggerStay(Collider other)
@@ -44,15 +48,25 @@ public class SnapZone : MonoBehaviour
             /*goal.GetComponent<Rigidbody>().isKinematic = true;
             goal.GetComponent<Rigidbody>().useGravity = false;*/
 
-            StartCoroutine(FixPosition());
+
+            tempTime = Time.deltaTime;
+            triggerFixPos = true;
+            //StartCoroutine(FixPosition());
+
         }
     }
 
-    public IEnumerator FixPosition()
+    /*public IEnumerator FixPosition()
     {
         yield return new WaitForSeconds(0.5f);
 
         grabbedObject.transform.localPosition = Vector3.zero;
+    }*/
+
+    public void FixPosition()
+    {
+        grabbedObject.transform.localPosition = Vector3.zero;
+        triggerFixPos = false;
     }
 
     public void EmitGrabbedObject(GameObject goal) {
