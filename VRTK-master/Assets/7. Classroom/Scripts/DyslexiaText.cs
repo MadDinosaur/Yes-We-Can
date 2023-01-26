@@ -47,6 +47,9 @@ public class DyslexiaText : MonoBehaviour
 
     string messUpWord(string word)
     {
+        //Null word
+        if (word.Length == 0) return word;
+        
         //Case with paragraph
         if (word[word.Length -1] =='\n')
         {

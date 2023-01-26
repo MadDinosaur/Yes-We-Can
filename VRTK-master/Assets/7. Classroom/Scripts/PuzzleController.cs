@@ -5,7 +5,7 @@ using UnityEngine;
 public class PuzzleController : MonoBehaviour
 {
     int totalPieces = 16;
-    int snappedPieces = 0;
+    int snappedPieces = 1;
 
     public EventPopUpVideo voiceLine;
     
