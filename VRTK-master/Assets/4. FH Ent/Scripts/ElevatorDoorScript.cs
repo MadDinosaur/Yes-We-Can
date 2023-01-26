@@ -5,36 +5,63 @@ using System;
 
 public class ElevatorDoorScript : MonoBehaviour
 {
+    public GameObject reflectionCamera;
     public GameObject leftDoor;
     public GameObject rightDoor;
     public float speed = 0.005f;
-    public float distance = 0.01f;
-    bool triggered;
+    public float openDistance = 0.01f;
+    public float closeDistance = 0.01f;
+    public float waitTime;
+    bool openTrigger;
+    bool closeTrigger;
     
     // Start is called before the first frame update
     void Start()
     {
+        //debug
+        openTrigger = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (triggered)
+        if (openTrigger)
         {
-            if (Math.Abs(leftDoor.transform.localPosition.x - rightDoor.transform.localPosition.x) < distance)
+            if (Math.Abs(leftDoor.transform.localPosition.x - rightDoor.transform.localPosition.x) < openDistance)
             {
                 leftDoor.transform.localPosition += Vector3.right * speed;
                 rightDoor.transform.localPosition += Vector3.left * speed;
+            } else
+            {
+                openTrigger = false;
+                StartCoroutine(WaitForDoorClose());
             }
+        } else if (closeTrigger)
+        {
+            if (Math.Abs(leftDoor.transform.localPosition.x - rightDoor.transform.localPosition.x) > closeDistance)
+            {
+                leftDoor.transform.localPosition -= Vector3.right * speed;
+                rightDoor.transform.localPosition -= Vector3.left * speed;
+            }
+            else closeTrigger = false;
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag.Equals("Headset") && !triggered)
+        if (other.gameObject.tag.Equals("Headset") && !openTrigger)
         {
-            triggered = true;
+            openTrigger = true;
             GetComponent<AudioSource>().Play();
+            reflectionCamera.SetActive(true);
         }
+    }
+
+    IEnumerator WaitForDoorClose()
+    {
+        yield return new WaitForSeconds(waitTime);
+
+        closeTrigger = true;
+        reflectionCamera.SetActive(false);
     }
 }

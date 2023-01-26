@@ -9,15 +9,7 @@ public class DoorScript : MonoBehaviour
     public float duration = 5;
     public bool openOnStart;
 
-    enum status
-    {
-        Opening,
-        Open,
-        Waiting,
-        Closing,
-        Closed
-    }
-    status doorStatus = status.Closed;
+    bool opening;
 
     const int openDoorRightPosition = 90;
 
@@ -47,7 +39,7 @@ public class DoorScript : MonoBehaviour
             }
         }
 
-        if (openOnStart) doorStatus = status.Opening;
+        if (openOnStart) opening = true;
     }
 
     List<Transform> GetChildren(Transform parent, bool recursive)
@@ -69,24 +61,15 @@ public class DoorScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch (doorStatus)
-        {
-            case status.Opening:
+        if (opening) { 
                 onOpened.Invoke();
                 openDoor();
-                break;
-                /*case status.Open:
-                    StartCoroutine(WaitToClose());
-                    break;
-                case status.Closing:
-                    closeDoor();
-                    break;*/
         }
     }
 
     public void openDoors()
     {
-        doorStatus = status.Opening;
+        opening = true;
     }
 
     void openDoor()
@@ -102,7 +85,7 @@ public class DoorScript : MonoBehaviour
         }
         else
         {
-            doorStatus = status.Open;
+            opening = false;
             foreach (BoxCollider collider in GetComponentsInChildren<BoxCollider>())
             {
                 collider.enabled = false;
@@ -110,7 +93,7 @@ public class DoorScript : MonoBehaviour
         }
     }
 
-        void closeDoor()
+       /* void closeDoor()
         {
             doorStatus = status.Closing;
 
@@ -133,5 +116,5 @@ public class DoorScript : MonoBehaviour
             yield return new WaitForSeconds(duration);
 
             closeDoor();
-        }
+        }*/
     }

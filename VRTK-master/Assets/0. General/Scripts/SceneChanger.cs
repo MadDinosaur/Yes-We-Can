@@ -12,14 +12,12 @@ public class SceneChanger : MonoBehaviour
 {
     public UnityEvent onSceneLoad;
 
-    public TextMeshPro debug;
-
     public bool fadeOnStart = true;
     public float transitionDuration = 2;
     public Color transitionColor;
     public GameObject screenFader;
     private Renderer rend;
-    
+
     static GameMode gameMode;
     static bool isInterviewOnly;
     static bool playVideoOnStart;
@@ -74,10 +72,8 @@ public class SceneChanger : MonoBehaviour
         }
 
         //Choose which character to active in entrance
-        debug.SetText(debug.text + "\n enableObjectsOnStart: " + enableObjectsOnStart);
         if (enableObjectsOnStart)
         {
-            debug.SetText(debug.text + "\n" + gameMode + characterObjects[0] + characterObjects[1] + characterObjects[2]);
             //Searches for character section and enables it
             switch (gameMode)
             {
@@ -106,7 +102,6 @@ public class SceneChanger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(gameMode);
 
     }
 
@@ -175,31 +170,24 @@ public class SceneChanger : MonoBehaviour
 
     public void LeaveFHEntrance()
     {
-        try
+        switch (gameMode)
         {
-            switch (gameMode)
-            {
-                case (GameMode.Wheelchair):
-                    GoToBasketballCourt();
-                    break;
-                case (GameMode.Blindess):
-                    GoToMusicRoom();
-                    break;
-                case (GameMode.Dyslexia):
-                    GoToPuzzleRoom();
-                    break;
-            }
-        } catch (Exception e)
-        {
-            debug.SetText(debug.text + "\n" + gameMode);
-            debug.SetText(debug.text + "\n" + e.StackTrace);
+            case (GameMode.Wheelchair):
+                GoToBasketballCourt();
+                break;
+            case (GameMode.Blindess):
+                GoToMusicRoom();
+                break;
+            case (GameMode.Dyslexia):
+                GoToPuzzleRoom();
+                break;
         }
     }
 
     public void GoToBasketballCourt()
     {
         if (basketballLoadTriggered) return;
-        
+
         mainMenuTriggered = false;
         basketballLoadTriggered = true;
         LoadScene(4);
@@ -236,14 +224,13 @@ public class SceneChanger : MonoBehaviour
 
     void LoadScene(int index)
     {
-        try { StartCoroutine(LoadSceneAsync(index)); }
-        catch ( Exception e) { debug.SetText(debug.text + "\n" + e.StackTrace); }
+        StartCoroutine(LoadSceneAsync(index));
     }
 
     IEnumerator LoadSceneAsync(int index)
     {
         FadeOut();
-        
+
         //Launch new scene
         AsyncOperation operation = SceneManager.LoadSceneAsync(index, LoadSceneMode.Single);
 
@@ -270,12 +257,12 @@ public class SceneChanger : MonoBehaviour
         Fade(0, 1);
     }
 
-    void Fade (float alphaIn, float alphaOut)
+    void Fade(float alphaIn, float alphaOut)
     {
         StartCoroutine(FadeRoutine(alphaIn, alphaOut));
     }
 
-    IEnumerator FadeRoutine (float alphaIn, float alphaOut)
+    IEnumerator FadeRoutine(float alphaIn, float alphaOut)
     {
         float timer = 0;
         while (timer <= transitionDuration)
