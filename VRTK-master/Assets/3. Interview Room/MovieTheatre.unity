@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1549,19 +1549,19 @@ PrefabInstance:
         type: 3}
       propertyPath: videoClips.Array.data[0]
       value: 
-      objectReference: {fileID: 32900000, guid: 6d72743230905e8429d4386076000578,
+      objectReference: {fileID: 32900000, guid: 93b0491ed1710f1438a7cee8a04e7a43,
         type: 3}
     - target: {fileID: 4225821302562823625, guid: fcc50a6038acca74cb5622fb36d1e9dd,
         type: 3}
       propertyPath: videoClips.Array.data[1]
       value: 
-      objectReference: {fileID: 32900000, guid: 267a1987c1b130e4caacab688deea8b9,
+      objectReference: {fileID: 32900000, guid: c735d294bb1772f4c869d798af9c2b2c,
         type: 3}
     - target: {fileID: 4225821302562823625, guid: fcc50a6038acca74cb5622fb36d1e9dd,
         type: 3}
       propertyPath: videoClips.Array.data[2]
       value: 
-      objectReference: {fileID: 32900000, guid: 267a1987c1b130e4caacab688deea8b9,
+      objectReference: {fileID: 32900000, guid: 7c68962170eb6d54fb507cb6724384ac,
         type: 3}
     - target: {fileID: 4524418137443270623, guid: fcc50a6038acca74cb5622fb36d1e9dd,
         type: 3}
