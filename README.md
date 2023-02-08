@@ -1,7 +1,7 @@
 ## European Project Semester
 ## Games & Media
 
-![YES, WE CAN](Documentation\Logo\YES_WE_CAN.png)
+![YES, WE CAN](Documentation/Logo/YES_WE_CAN.png)
 
 ### *A Virtual Reality experience to raise awareness of obstacles and barriers people with disabilities face.*
 
@@ -10,9 +10,9 @@
 **Screenshots**
 |               |             |
 | ------------- |:-------------:|
-| ![](Documentation\Development\20230109_menu.png) | ![](Documentation\Development\20230109_classroom.png) |
-|![](Documentation\Development\20230109_entrance.png)|![](Documentation\Development\20230109_entrance4.png)|
-|![](Documentation\Development\20230109_theatre.png)|![](Documentation\Development\20230109_basketball.png)|
+| ![](Documentation/Development/20230109_menu.png) | ![](Documentation/Development/20230109_classroom.png) |
+|![](Documentation/Development/20230109_entrance.png)|![](Documentation/Development/20230109_entrance4.png)|
+|![](Documentation/Development/20230109_theatre.png)|![](Documentation/Development/20230109_basketball.png)|
 
 ---
 
@@ -24,16 +24,6 @@
 
 * [Budget](Documentation/Budget/Grant%20Call%20Application.pdf)
 
----
-
-**Videos**
-
-<br>
-
-* Making Of
-
-<a href="Documentation\MakingOf\makingOf.mp4" target="_blank"><img src="Documentation\MakingOf\thumbnail.png" 
-width="50%"/></a>
 
 ----
 
