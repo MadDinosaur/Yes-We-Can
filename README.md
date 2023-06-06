@@ -42,8 +42,19 @@ The purpose of the two environments is to show, in the first place, the daily st
 
 
 ----
-
 **&copy; Team BOB**
+
+Logan Petet 🇺🇸 <sub>Project Leader, UI Designer, Sound Designer, Game Environment Designer</sub>
+
+Ysabel Berger 🇺🇸 <sub>UI/UX Designer, Sound Designer</sub>
+
+David Llinares 🇪🇸 <sub>Media Tech, Narrative Creator</sub>
+
+Jana Phung 🇩🇪 <sub>Media Tech, Post-Production Producer and Video Sound Designer</sub>
+
+Nicolas Alcaniz 🇩🇪 <sub>3D Modeler</sub>
+
+Diana Pinto 🇵🇹 <sub>Scrum Master, Lead Programmer</sub>
 
 <img src="Documentation\Logo\TEAM_BOB.png" alt= "Team Bob Productions" width=15% height=10%>
 
