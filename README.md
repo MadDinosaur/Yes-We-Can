@@ -42,6 +42,8 @@ Gameplay, in-game video content and making of are available on the [Team BOB you
 
 * [Project Report](Documentation/Report/EPS%20Project%20Report.pdf)
 
+* [Scrum Diary](https://miro.com/app/board/uXjVPRXBfPc=/?share_link_id=197032451058)
+
 * [Budget](Documentation/Budget/Grant%20Call%20Application.pdf)
 
 * [Others](Documentation/)
